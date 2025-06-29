@@ -55,11 +55,11 @@ const NavItemComponent = ({
         onClick={hasChildren ? handleToggle : handleItemClick}
         className={cn(
           "w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md transition-colors",
-          "hover:bg-gray-100 dark:hover:bg-gray-800",
-          isActive && "bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400",
-          level === 0 && "font-semibold text-gray-900 dark:text-gray-100",
-          level === 1 && "text-gray-700 dark:text-gray-300",
-          level >= 2 && "text-gray-600 dark:text-gray-400"
+          "hover:bg-primary-50 dark:hover:bg-primary-950/20",
+          isActive && "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300",
+          level === 0 && "font-semibold text-foreground",
+          level === 1 && "text-foreground/80",
+          level >= 2 && "text-foreground/60"
         )}
         style={{ paddingLeft: `${12 + level * 16}px` }}
         whileHover={{ scale: 1.02 }}
@@ -107,15 +107,15 @@ export default function SideNavPanel({ data, className, onItemSelect }: SideNavP
 
   return (
     <div className={cn(
-      "w-64 h-full bg-white dark:bg-gray-950 border-r border-gray-200 dark:border-gray-800",
+      "w-64 h-full bg-background border-r border-border",
       "flex flex-col overflow-hidden",
       className
     )}>
-      <div className="p-4 border-b border-gray-200 dark:border-gray-800">
-        <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+      <div className="p-4 border-b border-border">
+        <h2 className="text-lg font-semibold text-foreground">
           FastUI
         </h2>
-        <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+        <p className="text-sm text-foreground/60 mt-1">
           Optym UI Components
         </p>
       </div>

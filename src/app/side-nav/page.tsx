@@ -71,7 +71,7 @@ export default function SideNavDemo() {
 
   return (
     <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
-      <SideNavPanel data={navData} onItemSelect={handleItemSelect} />
+      <SideNavPanel data={navData} onItemSelect={handleItemSelect}/>
       <div className="flex-1 p-8">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-6">
