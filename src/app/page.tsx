@@ -1,103 +1,300 @@
+'use client';
+
 import Image from "next/image";
+import Link from "next/link";
+import { 
+  Box, 
+  Container, 
+  Typography, 
+  Card, 
+  CardContent, 
+  Button, 
+  Grid, 
+  Stack,
+  Chip,
+  Paper,
+  Divider
+} from "@mui/material";
+import { useTheme as useCustomTheme } from "@/components/ThemeProvider";
+import { ThemeSwitcher } from "@/components/ThemeSwitcher";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const { currentTheme, setTheme } = useCustomTheme();
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const themes = [
+    { id: 'root', name: 'Default', description: 'Blue primary colors', color: '#1976d2' },
+    { id: 'rmax', name: 'RMAX', description: 'Light blue primary colors', color: '#00bcd4' },
+    { id: 'loadai', name: 'LoadAI', description: 'Orange primary colors', color: '#ff9800' },
+    { id: 'optym', name: 'Optym', description: 'Green primary colors', color: '#4caf50' },
+  ];
+
+  return (
+    <Box sx={{ 
+      minHeight: '100vh', 
+      background: 'linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, rgba(25, 118, 210, 0.02) 100%)',
+      py: 4
+    }}>
+      <Container maxWidth="lg">
+        <ThemeSwitcher />
+        
+        <Box sx={{ textAlign: { xs: 'center', sm: 'left' }, mb: 6 }}>
+          <Typography 
+            variant="h2" 
+            component="h1" 
+            sx={{ 
+              fontWeight: 'bold', 
+              mb: 2,
+              background: 'linear-gradient(45deg, #1976d2, #42a5f5)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              fontSize: { xs: '2.5rem', md: '3.5rem' }
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            FastUI - Optym UI Components
+          </Typography>
+          <Typography 
+            variant="h5" 
+            color="text.secondary" 
+            sx={{ 
+              mb: 4,
+              maxWidth: 600,
+              lineHeight: 1.4
+            }}
           >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            AI-powered UI component library with customizable themes for modern frontend developers
+          </Typography>
+        </Box>
+
+        <Grid container spacing={3} sx={{ mb: 6 }}>
+          {themes.map((themeOption) => (
+            <Grid item xs={12} sm={6} md={3} key={themeOption.id}>
+              <Card 
+                sx={{ 
+                  cursor: 'pointer',
+                  border: currentTheme === themeOption.id ? 3 : 1,
+                  borderColor: currentTheme === themeOption.id ? 'primary.main' : 'divider',
+                  transition: 'all 0.3s ease',
+                  '&:hover': {
+                    transform: 'translateY(-4px)',
+                    boxShadow: 8,
+                    borderColor: 'primary.main',
+                  },
+                  height: '100%'
+                }}
+                onClick={() => setTheme(themeOption.id as typeof currentTheme)}
+              >
+                <CardContent sx={{ p: 3, textAlign: 'center' }}>
+                  <Box
+                    sx={{ 
+                      width: 60, 
+                      height: 60, 
+                      borderRadius: '50%',
+                      backgroundColor: themeOption.color,
+                      mx: 'auto',
+                      mb: 2,
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      boxShadow: 2
+                    }}
+                  >
+                    <Typography variant="h6" sx={{ color: 'white', fontWeight: 'bold' }}>
+                      {themeOption.name.charAt(0)}
+                    </Typography>
+                  </Box>
+                  <Typography variant="h6" component="h3" sx={{ mb: 1, fontWeight: 600 }}>
+                    {themeOption.name} Theme
+                  </Typography>
+                  <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
+                    {themeOption.description}
+                  </Typography>
+                  {currentTheme === themeOption.id && (
+                    <Chip 
+                      label="Active" 
+                      size="small" 
+                      color="primary" 
+                      sx={{ fontWeight: 600 }}
+                    />
+                  )}
+                </CardContent>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+
+        <Paper sx={{ p: 4, mb: 6, borderRadius: 3 }}>
+          <Stack 
+            direction={{ xs: 'column', sm: 'row' }} 
+            spacing={3} 
+            alignItems="center"
+            justifyContent="center"
+          >
+            <Button
+              component={Link}
+              href="/routemax/components"
+              variant="contained"
+              size="large"
+              startIcon={
+                <Image
+                  src="/next.svg"
+                  alt="Next.js logo"
+                  width={20}
+                  height={20}
+                />
+              }
+              sx={{ 
+                px: 4, 
+                py: 1.5,
+                borderRadius: 2,
+                fontWeight: 600,
+                fontSize: '1.1rem'
+              }}
+            >
+              View RMAX Components
+            </Button>
+            <Button
+              component={Link}
+              href="/routemax"
+              variant="outlined"
+              size="large"
+              sx={{ 
+                px: 4, 
+                py: 1.5,
+                borderRadius: 2,
+                fontWeight: 600,
+                fontSize: '1.1rem'
+              }}
+            >
+              RMAX Button Demo
+            </Button>
+          </Stack>
+        </Paper>
+
+        <Grid container spacing={4}>
+          <Grid item xs={12} lg={8}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent sx={{ p: 4 }}>
+                <Typography variant="h4" component="h3" sx={{ mb: 3, fontWeight: 600 }}>
+                  Available Themes
+                </Typography>
+                <Stack spacing={2}>
+                  {themes.map((theme) => (
+                    <Box key={theme.id} sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                      <Box
+                        sx={{ 
+                          width: 16, 
+                          height: 16, 
+                          borderRadius: '50%',
+                          backgroundColor: theme.color,
+                          flexShrink: 0
+                        }}
+                      />
+                      <Box>
+                        <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
+                          {theme.name}:
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          {theme.description}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  ))}
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+          
+          <Grid item xs={12} lg={4}>
+            <Card sx={{ height: '100%' }}>
+              <CardContent sx={{ p: 4 }}>
+                <Typography variant="h5" component="h3" sx={{ mb: 3, fontWeight: 600 }}>
+                  Features
+                </Typography>
+                <Stack spacing={2}>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Chip label="Material UI" color="primary" size="small" />
+                    <Typography variant="body2">Modern design system</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Chip label="Theme Support" color="secondary" size="small" />
+                    <Typography variant="body2">Multiple business unit themes</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Chip label="Responsive" color="success" size="small" />
+                    <Typography variant="body2">Mobile-first design</Typography>
+                  </Box>
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                    <Chip label="TypeScript" color="info" size="small" />
+                    <Typography variant="body2">Full type safety</Typography>
+                  </Box>
+                </Stack>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+
+        <Divider sx={{ my: 6 }} />
+        
+        <Box sx={{ textAlign: 'center' }}>
+          <Typography variant="h6" sx={{ mb: 3, fontWeight: 600 }}>
+            Learn More
+          </Typography>
+          <Stack direction="row" spacing={3} justifyContent="center" flexWrap="wrap">
+            <Button
+              component="a"
+              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              startIcon={
+                <Image
+                  src="/file.svg"
+                  alt="File icon"
+                  width={16}
+                  height={16}
+                />
+              }
+              sx={{ textTransform: 'none', fontWeight: 500 }}
+            >
+              Learn
+            </Button>
+            <Button
+              component="a"
+              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              startIcon={
+                <Image
+                  src="/window.svg"
+                  alt="Window icon"
+                  width={16}
+                  height={16}
+                />
+              }
+              sx={{ textTransform: 'none', fontWeight: 500 }}
+            >
+              Examples
+            </Button>
+            <Button
+              component="a"
+              href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              startIcon={
+                <Image
+                  src="/globe.svg"
+                  alt="Globe icon"
+                  width={16}
+                  height={16}
+                />
+              }
+              sx={{ textTransform: 'none', fontWeight: 500 }}
+            >
+              Go to nextjs.org →
+            </Button>
+          </Stack>
+        </Box>
+      </Container>
+    </Box>
   );
 }

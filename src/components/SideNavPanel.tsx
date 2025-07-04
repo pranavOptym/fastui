@@ -2,8 +2,26 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { ChevronDown, ChevronRight, Folder, File, Building } from "lucide-react"
-import { cn } from "@/lib/utils"
+import { 
+  Box, 
+  Typography, 
+  Paper, 
+  List, 
+  ListItem, 
+  ListItemButton, 
+  ListItemIcon, 
+  ListItemText,
+  styled,
+  Divider,
+  Avatar
+} from "@mui/material"
+import { 
+  ChevronRight, 
+  Folder, 
+  InsertDriveFile, 
+  Business,
+  Palette
+} from "@mui/icons-material"
 import { useNavState, type NavItem } from "@/hooks/useNavState"
 
 interface SideNavPanelProps {
@@ -11,6 +29,67 @@ interface SideNavPanelProps {
   className?: string
   onItemSelect?: (item: NavItem) => void
 }
+
+// Styled components
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  width: 280,
+  height: '100%',
+  display: 'flex',
+  flexDirection: 'column',
+  overflow: 'hidden',
+  borderRadius: 0,
+  borderRight: `1px solid ${theme.palette.divider}`,
+  boxShadow: theme.shadows[4],
+  background: `linear-gradient(180deg, ${theme.palette.background.paper} 0%, ${theme.palette.grey[50]} 100%)`,
+}));
+
+const StyledListItemButton = styled(ListItemButton, {
+  shouldForwardProp: (prop) => !['level', 'isActive'].includes(prop as string),
+})<{ level?: number; isActive?: boolean }>(({ theme, level = 0, isActive }) => ({
+  paddingLeft: theme.spacing(2 + level * 2),
+  paddingRight: theme.spacing(2),
+  paddingTop: theme.spacing(1.5),
+  paddingBottom: theme.spacing(1.5),
+  borderRadius: theme.spacing(1),
+  margin: theme.spacing(0.5, 1),
+  transition: 'all 0.2s ease-in-out',
+  '&:hover': {
+    backgroundColor: theme.palette.primary.light + '15',
+    color: theme.palette.primary.main,
+    transform: 'translateX(4px)',
+  },
+  ...(isActive && {
+    backgroundColor: theme.palette.primary.light + '25',
+    color: theme.palette.primary.main,
+    fontWeight: 600,
+    '&:hover': {
+      backgroundColor: theme.palette.primary.light + '30',
+    },
+    '&::before': {
+      content: '""',
+      position: 'absolute',
+      left: 0,
+      top: 0,
+      bottom: 0,
+      width: 4,
+      backgroundColor: theme.palette.primary.main,
+      borderRadius: '0 2px 2px 0',
+    },
+  }),
+  ...(level === 0 && {
+    fontWeight: 600,
+    color: theme.palette.text.primary,
+    fontSize: '0.95rem',
+  }),
+  ...(level === 1 && {
+    color: theme.palette.text.primary + 'DD',
+    fontSize: '0.9rem',
+  }),
+  ...(level >= 2 && {
+    color: theme.palette.text.primary + 'BB',
+    fontSize: '0.85rem',
+  }),
+}));
 
 const NavItemComponent = ({ 
   item, 
@@ -33,6 +112,7 @@ const NavItemComponent = ({
     if (hasChildren) {
       setIsExpanded(!isExpanded)
     }
+    onItemSelect?.(item)
   }
 
   const handleItemClick = () => {
@@ -43,48 +123,53 @@ const NavItemComponent = ({
   const getIcon = () => {
     if (item.icon) return item.icon
     
-    if (level === 0) return <Building className="w-4 h-4" />
-    if (level === 1) return <Folder className="w-4 h-4" />
-    if (level === 2) return <File className="w-4 h-4" />
-    return <File className="w-4 h-4" />
+    if (level === 0) return <Business fontSize="small" />
+    if (level === 1) return <Folder fontSize="small" />
+    if (level === 2) return <InsertDriveFile fontSize="small" />
+    return <InsertDriveFile fontSize="small" />
   }
 
   return (
-    <div className="w-full">
-      <motion.button
-        onClick={hasChildren ? handleToggle : handleItemClick}
-        className={cn(
-          "w-full flex items-center gap-2 px-3 py-2 text-sm rounded-md transition-colors",
-          "hover:bg-primary-50 dark:hover:bg-primary-950/20",
-          isActive && "bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300",
-          level === 0 && "font-semibold text-foreground",
-          level === 1 && "text-foreground/80",
-          level >= 2 && "text-foreground/60"
-        )}
-        style={{ paddingLeft: `${12 + level * 16}px` }}
+    <Box sx={{ width: '100%' }}>
+      <motion.div
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
       >
-        {getIcon()}
-        <span className="flex-1 text-left truncate">{item.label}</span>
-        {hasChildren && (
-          <motion.div
-            animate={{ rotate: isExpanded ? 90 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
-            <ChevronRight className="w-4 h-4" />
-          </motion.div>
-        )}
-      </motion.button>
+        <StyledListItemButton
+          onClick={hasChildren ? handleToggle : handleItemClick}
+          level={level}
+          isActive={isActive}
+        >
+          <ListItemIcon sx={{ minWidth: 36 }}>
+            {getIcon()}
+          </ListItemIcon>
+          <ListItemText 
+            primary={item.label}
+            primaryTypographyProps={{
+              fontSize: 'inherit',
+              fontWeight: 'inherit',
+              noWrap: true,
+            }}
+          />
+          {hasChildren && (
+            <motion.div
+              animate={{ rotate: isExpanded ? 90 : 0 }}
+              transition={{ duration: 0.2 }}
+            >
+              <ChevronRight fontSize="small" />
+            </motion.div>
+          )}
+        </StyledListItemButton>
+      </motion.div>
 
       {hasChildren && (
         <motion.div
           initial={false}
           animate={{ height: isExpanded ? "auto" : 0, opacity: isExpanded ? 1 : 0 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="overflow-hidden"
+          style={{ overflow: 'hidden' }}
         >
-          <div className="space-y-1">
+          <Box sx={{ py: 0.5 }}>
             {item.children!.map((child) => (
               <NavItemComponent 
                 key={child.id} 
@@ -95,10 +180,10 @@ const NavItemComponent = ({
                 setActiveItem={setActiveItem}
               />
             ))}
-          </div>
+          </Box>
         </motion.div>
       )}
-    </div>
+    </Box>
   )
 }
 
@@ -106,33 +191,57 @@ export default function SideNavPanel({ data, className, onItemSelect }: SideNavP
   const { activeItem, setActive } = useNavState(data)
 
   return (
-    <div className={cn(
-      "w-64 h-full bg-background border-r border-border",
-      "flex flex-col overflow-hidden",
-      className
-    )}>
-      <div className="p-4 border-b border-border">
-        <h2 className="text-lg font-semibold text-foreground">
-          FastUI
-        </h2>
-        <p className="text-sm text-foreground/60 mt-1">
-          Optym UI Components
-        </p>
-      </div>
+    <StyledPaper className={className}>
+      <Box sx={{ 
+        p: 3, 
+        borderBottom: 1, 
+        borderColor: 'divider',
+        background: 'linear-gradient(135deg, rgba(25, 118, 210, 0.1) 0%, rgba(25, 118, 210, 0.05) 100%)'
+      }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 1 }}>
+          <Avatar sx={{ 
+            bgcolor: 'primary.main', 
+            width: 40, 
+            height: 40,
+            boxShadow: 2
+          }}>
+            <Palette />
+          </Avatar>
+          <Box>
+            <Typography variant="h5" component="h2" sx={{ fontWeight: 700, color: 'primary.main' }}>
+              FastUI
+            </Typography>
+            <Typography variant="caption" color="text.secondary" sx={{ fontWeight: 500 }}>
+              Optym UI Components
+            </Typography>
+          </Box>
+        </Box>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 1, opacity: 0.8 }}>
+          AI-powered component library
+        </Typography>
+      </Box>
 
-      <div className="flex-1 overflow-y-auto p-2">
-        <div className="space-y-1">
+      <Box sx={{ flex: 1, overflow: 'auto', py: 1 }}>
+        <List sx={{ py: 0 }}>
           {data.map((item) => (
-            <NavItemComponent 
-              key={item.id} 
-              item={item}
-              onItemSelect={onItemSelect}
-              activeItem={activeItem}
-              setActiveItem={setActive}
-            />
+            <ListItem key={item.id} sx={{ px: 0, py: 0 }}>
+              <NavItemComponent 
+                item={item}
+                onItemSelect={onItemSelect}
+                activeItem={activeItem}
+                setActiveItem={setActive}
+              />
+            </ListItem>
           ))}
-        </div>
-      </div>
-    </div>
+        </List>
+      </Box>
+
+      <Divider />
+      <Box sx={{ p: 2, textAlign: 'center' }}>
+        <Typography variant="caption" color="text.secondary">
+          Built with Material UI
+        </Typography>
+      </Box>
+    </StyledPaper>
   )
 }
