@@ -1,14 +1,10 @@
 "use client"
 
-import React, { useState } from 'react';
-import { Box, Card, CardContent, Typography, Button, Tabs, Tab } from '@mui/material';
-import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import RmaxButton from './Routemax/RmaxButton';
-import { Star, ArrowForward } from '@mui/icons-material';
+import React, { useEffect, useState } from 'react';
+import { Box } from '@mui/material';
 import LivePlayground from './LivePlayground';
-
 interface ReactLiveEditorProps {
-  componentType: 'button' | 'form' | 'login';
+  componentType: 'button' | 'tabBar';
 }
 
 export const ReactLiveEditor: React.FC<ReactLiveEditorProps> = ({ componentType }) => {
@@ -127,11 +123,28 @@ export const ReactLiveEditor: React.FC<ReactLiveEditorProps> = ({ componentType 
       />
     </div>
   </form>
-</div>`
+</div>`,
+tabBar: `<RmaxTabBar
+  tabs={[{ label: 'Tab 1', value: 'tab1' }, { label: 'Tab 2', value: 'tab2' }]}
+  value="tab1"
+  onChange={(event, value) => console.log(value)}
+  actions={{
+    actions: [
+      { icon: <Settings />, onClick: () => console.log('settings'), color: 'white', tooltip: 'Settings' },
+      { icon: <Upload />, onClick: () => console.log('upload') },
+      { icon: <Help />, onClick: () => console.log('help') },
+      { icon: <Cached />, onClick: () => console.log('cached') },
+    ]
+  }}
+/>`
   };
 
 
   const [code, setCode] = useState(defaultCode[componentType]);
+
+  useEffect(() => {
+    setCode(defaultCode[componentType]);
+  }, [componentType]);
 
   return (
     <Box sx={{ height: '80vh' }}>

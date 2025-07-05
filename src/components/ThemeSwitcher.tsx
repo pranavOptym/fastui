@@ -13,10 +13,8 @@ import {
 import { useTheme as useCustomTheme } from './ThemeProvider';
 
 const themes = [
-  { id: 'root', name: 'Default', color: '#1976d2', description: 'Standard blue theme' },
-  { id: 'rmax', name: 'RMAX', color: '#00bcd4', description: 'Light blue for RMAX' },
-  { id: 'loadai', name: 'LoadAI', color: '#ff9800', description: 'Orange for LoadAI' },
-  { id: 'optym', name: 'Optym', color: '#4caf50', description: 'Green for Optym' },
+  { id: 'light', name: 'Light', color: '#1976d2', description: 'Light theme with design tokens' },
+  { id: 'dark', name: 'Dark', color: '#90caf9', description: 'Dark theme with design tokens' },
 ];
 
 export const ThemeSwitcher: React.FC = () => {

@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Alert, Box, Typography } from "@mui/material";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
-import RmaxButton from "./Routemax/RmaxButton";
-import { Star, ArrowForward } from "@mui/icons-material";
+import RmaxButton  from "./Routemax/RmaxButton";
+import * as Icons from "@mui/icons-material";
+import RmaxTabBar from "./Routemax/RmaxTabBar";
 
 // Types for EditorWithAutoScroll props
 interface EditorWithAutoScrollProps {
@@ -18,7 +19,7 @@ interface LivePlaygroundProps {
   onChange?: (newCode: string) => void;
 }
 
-const scope = { RmaxButton, Star, ArrowForward, Alert };
+const scope = { RmaxButton, ...Icons, Alert, RmaxTabBar };
 
 const defaultCode = `
 <RmaxButton
@@ -78,7 +79,7 @@ const EditorWithAutoScroll = ({ code, onChange }: EditorWithAutoScrollProps) => 
   );
 };
 
-const LivePlayground = ({ code = defaultCode, onChange }: LivePlaygroundProps) => {
+const LivePlayground = ({ code,  onChange }: LivePlaygroundProps) => {
   const [internalCode, setInternalCode] = useState(code);
   
   const handleCodeChange = (newCode: string) => {
@@ -87,6 +88,10 @@ const LivePlayground = ({ code = defaultCode, onChange }: LivePlaygroundProps) =
       onChange(newCode);
     }
   };
+
+  useEffect(() => {
+    setInternalCode(code);
+  }, [code]);
 
   return (
     <Box

@@ -22,10 +22,8 @@ export default function Home() {
   const { currentTheme, setTheme } = useCustomTheme();
 
   const themes = [
-    { id: 'root', name: 'Default', description: 'Blue primary colors', color: '#1976d2' },
-    { id: 'rmax', name: 'RMAX', description: 'Light blue primary colors', color: '#00bcd4' },
-    { id: 'loadai', name: 'LoadAI', description: 'Orange primary colors', color: '#ff9800' },
-    { id: 'optym', name: 'Optym', description: 'Green primary colors', color: '#4caf50' },
+    { id: 'light', name: 'Light', description: 'Light theme with design tokens', color: '#1976d2' },
+    { id: 'dark', name: 'Dark', description: 'Dark theme with design tokens', color: '#90caf9' },
   ];
 
   return (

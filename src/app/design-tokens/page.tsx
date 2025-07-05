@@ -5,6 +5,7 @@ import { Button as CustomButton } from "@/components/Routemax/Button"
 import { Star, ArrowForward, Favorite, Download, Settings, Home } from "@mui/icons-material"
 import { useDesignTokens } from "@/hooks/useDesignTokens"
 import { useTheme } from "@/components/ThemeProvider"
+import { FigmaDesignTokens } from "@/components/FigmaDesignTokens"
 import Link from "next/link"
 
 export default function DesignTokensDemo() {
@@ -14,7 +15,7 @@ export default function DesignTokensDemo() {
   return (
     <Box sx={{ 
       minHeight: '100vh', 
-      background: `linear-gradient(135deg, ${tokens?.soft?.primary || 'rgba(0, 188, 212, 0.05)'} 0%, rgba(255, 255, 255, 0.02) 100%)`,
+      background: `linear-gradient(135deg, ${tokens?.designTokens?.primary?.hover || 'rgba(25, 118, 210, 0.04)'} 0%, rgba(255, 255, 255, 0.02) 100%)`,
       py: 4
     }}>
       <Container maxWidth="lg">
@@ -35,7 +36,7 @@ export default function DesignTokensDemo() {
             sx={{ 
               fontWeight: 'bold', 
               mb: 2,
-              background: tokens?.gradients?.primary || 'linear-gradient(45deg, #00bcd4, #4dd0e1)',
+              background: 'linear-gradient(45deg, #1976d2, #42a5f5)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
@@ -54,7 +55,7 @@ export default function DesignTokensDemo() {
               Current Theme: {currentTheme.toUpperCase()}
             </Typography>
             <Stack direction="row" spacing={2} flexWrap="wrap">
-              {['root', 'rmax', 'loadai', 'optym'].map((theme) => (
+              {['light', 'dark'].map((theme) => (
                 <Button
                   key={theme}
                   variant={currentTheme === theme ? "contained" : "outlined"}
@@ -67,6 +68,9 @@ export default function DesignTokensDemo() {
             </Stack>
           </Box>
         </Box>
+
+        {/* Figma Design Tokens Demo */}
+        <FigmaDesignTokens />
 
         <Grid container spacing={4}>
           {/* Design Tokens Overview */}
@@ -229,7 +233,7 @@ export default function DesignTokensDemo() {
                 <Stack spacing={2}>
                   <Box sx={{ 
                     p: 3, 
-                    background: tokens?.gradients?.primary,
+                    background: 'linear-gradient(45deg, #1976d2, #42a5f5)',
                     color: 'white',
                     borderRadius: tokens?.borderRadius?.md,
                     textAlign: 'center'
@@ -238,7 +242,7 @@ export default function DesignTokensDemo() {
                   </Box>
                   <Box sx={{ 
                     p: 3, 
-                    background: tokens?.gradients?.primaryHover,
+                    background: 'linear-gradient(45deg, #1565c0, #1976d2)',
                     color: 'white',
                     borderRadius: tokens?.borderRadius?.md,
                     textAlign: 'center'

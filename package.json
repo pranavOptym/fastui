@@ -19,8 +19,7 @@
     "fs": "0.0.1-security",
     "next": "15.3.4",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-live": "^4.1.8"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -29,6 +28,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "react-live": "^4.1.8",
     "typescript": "^5"
   }
 }

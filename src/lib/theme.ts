@@ -30,17 +30,75 @@ declare module '@mui/material/styles' {
         normal: string;
         slow: string;
       };
-      gradients?: {
-        primary: string;
-        primaryHover: string;
-      };
-      soft?: {
-        primary: string;
-        primaryHover: string;
-        primaryBorder: string;
-      };
-      glow?: {
-        primary: string;
+      // Design tokens for light and dark themes
+      designTokens?: {
+        text: {
+          primary: string;
+          secondary: string;
+          disabled: string;
+        };
+        primary: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+          hover: string;
+          selected: string;
+          focus: string;
+          focusVisible: string;
+          outlinedBorder: string;
+        };
+        secondary: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        error: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        warning: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        info: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        success: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        background: {
+          default: string;
+          paper: string;
+          'paper-elevation-0': string;
+          'paper-elevation-2': string;
+          'paper-elevation-16': string;
+          'paper-elevation-24': string;
+        };
+        action: {
+          active: string;
+          hover: string;
+          selected: string;
+          disabledBackground: string;
+          focus: string;
+          disabled: string;
+        };
+        divider: string;
+        common: {
+          white: string;
+          black: string;
+        };
       };
     };
   }
@@ -72,17 +130,75 @@ declare module '@mui/material/styles' {
         normal: string;
         slow: string;
       };
-      gradients?: {
-        primary: string;
-        primaryHover: string;
-      };
-      soft?: {
-        primary: string;
-        primaryHover: string;
-        primaryBorder: string;
-      };
-      glow?: {
-        primary: string;
+      // Design tokens for light and dark themes
+      designTokens?: {
+        text: {
+          primary: string;
+          secondary: string;
+          disabled: string;
+        };
+        primary: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+          hover: string;
+          selected: string;
+          focus: string;
+          focusVisible: string;
+          outlinedBorder: string;
+        };
+        secondary: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        error: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        warning: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        info: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        success: {
+          main: string;
+          dark: string;
+          light: string;
+          contrast: string;
+        };
+        background: {
+          default: string;
+          paper: string;
+          'paper-elevation-0': string;
+          'paper-elevation-2': string;
+          'paper-elevation-16': string;
+          'paper-elevation-24': string;
+        };
+        action: {
+          active: string;
+          hover: string;
+          selected: string;
+          disabledBackground: string;
+          focus: string;
+          disabled: string;
+        };
+        divider: string;
+        common: {
+          white: string;
+          black: string;
+        };
       };
     };
   }
@@ -122,8 +238,8 @@ const designTokens = {
   },
 };
 
-// Root theme colors
-const rootColors = {
+// Light theme colors with design tokens
+const lightColors = {
   primary: {
     main: '#1976d2',
     light: '#42a5f5',
@@ -179,125 +295,229 @@ const rootColors = {
   text: {
     primary: 'rgba(0, 0, 0, 0.87)',
     secondary: 'rgba(0, 0, 0, 0.6)',
+    disabled: 'rgba(0, 0, 0, 0.38)',
+  },
+  action: {
+    active: 'rgba(0, 0, 0, 0.54)',
+    hover: 'rgba(0, 0, 0, 0.04)',
+    selected: 'rgba(0, 0, 0, 0.08)',
+    disabledBackground: 'rgba(0, 0, 0, 0.12)',
+    focus: 'rgba(0, 0, 0, 0.12)',
+    disabled: 'rgba(0, 0, 0, 0.38)',
+  },
+  divider: 'rgba(0, 0, 0, 0.12)',
+  // Light theme design tokens
+  custom: {
+    designTokens: {
+      text: {
+        primary: 'rgba(0, 0, 0, 0.87)',
+        secondary: 'rgba(0, 0, 0, 0.6)',
+        disabled: 'rgba(0, 0, 0, 0.38)',
+      },
+      primary: {
+        main: '#1976d2',
+        dark: '#1565c0',
+        light: '#42a5f5',
+        contrast: '#ffffff',
+        hover: 'rgba(25, 118, 210, 0.04)',
+        selected: 'rgba(25, 118, 210, 0.08)',
+        focus: 'rgba(25, 118, 210, 0.12)',
+        focusVisible: 'rgba(25, 118, 210, 0.3)',
+        outlinedBorder: 'rgba(25, 118, 210, 0.5)',
+      },
+      secondary: {
+        main: '#9c27b0',
+        dark: '#7b1fa2',
+        light: '#ba68c8',
+        contrast: '#ffffff',
+      },
+      error: {
+        main: '#d32f2f',
+        dark: '#c62828',
+        light: '#ef5350',
+        contrast: '#ffffff',
+      },
+      warning: {
+        main: '#ed6c02',
+        dark: '#e65100',
+        light: '#ff9800',
+        contrast: '#ffffff',
+      },
+      info: {
+        main: '#0288d1',
+        dark: '#01579b',
+        light: '#03a9f4',
+        contrast: '#ffffff',
+      },
+      success: {
+        main: '#2e7d32',
+        dark: '#1b5e20',
+        light: '#4caf50',
+        contrast: '#ffffff',
+      },
+      background: {
+        default: '#ffffff',
+        paper: '#ffffff',
+        'paper-elevation-0': '#ffffff',
+        'paper-elevation-2': 'rgba(255, 255, 255, 0.7)',
+        'paper-elevation-16': 'rgba(255, 255, 255, 0.15)',
+        'paper-elevation-24': 'rgba(255, 255, 255, 0.16)',
+      },
+      action: {
+        active: 'rgba(0, 0, 0, 0.54)',
+        hover: 'rgba(0, 0, 0, 0.04)',
+        selected: 'rgba(0, 0, 0, 0.08)',
+        disabledBackground: 'rgba(0, 0, 0, 0.12)',
+        focus: 'rgba(0, 0, 0, 0.12)',
+        disabled: 'rgba(0, 0, 0, 0.38)',
+      },
+      divider: 'rgba(0, 0, 0, 0.12)',
+      common: {
+        white: '#ffffff',
+        black: '#000000',
+      },
+    },
   },
 };
 
-// RMAX theme colors with design tokens
-const rmaxColors = {
+// Dark theme colors with design tokens
+const darkColors = {
   primary: {
-    main: '#00bcd4',
-    light: '#4dd0e1',
-    dark: '#0097a7',
-    contrastText: '#ffffff',
+    main: '#90caf9',
+    light: '#e3f2fd',
+    dark: '#42a5f5',
+    contrastText: '#000000',
   },
   secondary: {
-    main: '#2196f3',
-    light: '#64b5f6',
-    dark: '#1976d2',
+    main: '#ce93d8',
+    light: '#f3e5f5',
+    dark: '#ab47bc',
+    contrastText: '#000000',
+  },
+  error: {
+    main: '#f44336',
+    light: '#e57373',
+    dark: '#d32f2f',
     contrastText: '#ffffff',
   },
-  background: {
-    default: '#ffffff',
-    paper: '#ffffff',
-  },
-  text: {
-    primary: '#00bcd4',
-    secondary: 'rgba(0, 188, 212, 0.7)',
-  },
-  // RMAX-specific design tokens
-  custom: {
-    // Gradients
-    gradients: {
-      primary: 'linear-gradient(45deg, #00bcd4 30%, #4dd0e1 90%)',
-      primaryHover: 'linear-gradient(45deg, #00bcd4 40%, #0097a7 100%)',
-    },
-    // Soft backgrounds
-    soft: {
-      primary: 'rgba(0, 188, 212, 0.1)',
-      primaryHover: 'rgba(0, 188, 212, 0.18)',
-      primaryBorder: 'rgba(0, 188, 212, 0.2)',
-    },
-    // Glow effects
-    glow: {
-      primary: '0 0 20px rgba(0, 188, 212, 0.3)',
-    },
-  },
-};
-
-// LoadAI theme colors with design tokens
-const loadaiColors = {
-  primary: {
-    main: '#ff9800',
+  warning: {
+    main: '#ffa726',
     light: '#ffb74d',
     dark: '#f57c00',
-    contrastText: '#ffffff',
+    contrastText: '#000000',
   },
-  secondary: {
-    main: '#795548',
-    light: '#a1887f',
-    dark: '#5d4037',
-    contrastText: '#ffffff',
+  info: {
+    main: '#29b6f6',
+    light: '#4fc3f7',
+    dark: '#0288d1',
+    contrastText: '#000000',
   },
-  background: {
-    default: '#fff8e1',
-    paper: '#ffffff',
-  },
-  text: {
-    primary: '#e65100',
-    secondary: 'rgba(230, 81, 0, 0.7)',
-  },
-  // LoadAI-specific design tokens
-  custom: {
-    gradients: {
-      primary: 'linear-gradient(45deg, #ff9800 30%, #ffb74d 90%)',
-      primaryHover: 'linear-gradient(45deg, #ff9800 40%, #f57c00 100%)',
-    },
-    soft: {
-      primary: 'rgba(255, 152, 0, 0.1)',
-      primaryHover: 'rgba(255, 152, 0, 0.18)',
-      primaryBorder: 'rgba(255, 152, 0, 0.2)',
-    },
-    glow: {
-      primary: '0 0 20px rgba(255, 152, 0, 0.3)',
-    },
-  },
-};
-
-// Optym theme colors with design tokens
-const optymColors = {
-  primary: {
-    main: '#4caf50',
+  success: {
+    main: '#66bb6a',
     light: '#81c784',
     dark: '#388e3c',
-    contrastText: '#ffffff',
+    contrastText: '#000000',
   },
-  secondary: {
-    main: '#009688',
-    light: '#4db6ac',
-    dark: '#00796b',
-    contrastText: '#ffffff',
+  grey: {
+    50: '#fafafa',
+    100: '#f5f5f5',
+    200: '#eeeeee',
+    300: '#e0e0e0',
+    400: '#bdbdbd',
+    500: '#9e9e9e',
+    600: '#757575',
+    700: '#616161',
+    800: '#424242',
+    900: '#212121',
   },
   background: {
-    default: '#f1f8e9',
-    paper: '#ffffff',
+    default: '#121212',
+    paper: '#1e1e1e',
   },
   text: {
-    primary: '#2e7d32',
-    secondary: 'rgba(46, 125, 50, 0.7)',
+    primary: 'rgba(255, 255, 255, 0.87)',
+    secondary: 'rgba(255, 255, 255, 0.6)',
+    disabled: 'rgba(255, 255, 255, 0.38)',
   },
-  // Optym-specific design tokens
+  action: {
+    active: 'rgba(255, 255, 255, 0.54)',
+    hover: 'rgba(255, 255, 255, 0.04)',
+    selected: 'rgba(255, 255, 255, 0.08)',
+    disabledBackground: 'rgba(255, 255, 255, 0.12)',
+    focus: 'rgba(255, 255, 255, 0.12)',
+    disabled: 'rgba(255, 255, 255, 0.38)',
+  },
+  divider: 'rgba(255, 255, 255, 0.12)',
+  // Dark theme design tokens
   custom: {
-    gradients: {
-      primary: 'linear-gradient(45deg, #4caf50 30%, #81c784 90%)',
-      primaryHover: 'linear-gradient(45deg, #4caf50 40%, #388e3c 100%)',
-    },
-    soft: {
-      primary: 'rgba(76, 175, 80, 0.1)',
-      primaryHover: 'rgba(76, 175, 80, 0.18)',
-      primaryBorder: 'rgba(76, 175, 80, 0.2)',
-    },
-    glow: {
-      primary: '0 0 20px rgba(76, 175, 80, 0.3)',
+    designTokens: {
+      text: {
+        primary: 'rgba(255, 255, 255, 0.87)',
+        secondary: 'rgba(255, 255, 255, 0.6)',
+        disabled: 'rgba(255, 255, 255, 0.38)',
+      },
+      primary: {
+        main: '#90caf9',
+        dark: '#42a5f5',
+        light: '#e3f2fd',
+        contrast: '#000000',
+        hover: 'rgba(144, 202, 249, 0.04)',
+        selected: 'rgba(144, 202, 249, 0.08)',
+        focus: 'rgba(144, 202, 249, 0.12)',
+        focusVisible: 'rgba(144, 202, 249, 0.3)',
+        outlinedBorder: 'rgba(144, 202, 249, 0.5)',
+      },
+      secondary: {
+        main: '#ce93d8',
+        dark: '#ab47bc',
+        light: '#f3e5f5',
+        contrast: '#000000',
+      },
+      error: {
+        main: '#f44336',
+        dark: '#d32f2f',
+        light: '#e57373',
+        contrast: '#ffffff',
+      },
+      warning: {
+        main: '#ffa726',
+        dark: '#f57c00',
+        light: '#ffb74d',
+        contrast: '#000000',
+      },
+      info: {
+        main: '#29b6f6',
+        dark: '#0288d1',
+        light: '#4fc3f7',
+        contrast: '#000000',
+      },
+      success: {
+        main: '#66bb6a',
+        dark: '#388e3c',
+        light: '#81c784',
+        contrast: '#000000',
+      },
+      background: {
+        default: '#121212',
+        paper: '#1e1e1e',
+        'paper-elevation-0': '#1e1e1e',
+        'paper-elevation-2': 'rgba(30, 30, 30, 0.7)',
+        'paper-elevation-16': 'rgba(30, 30, 30, 0.15)',
+        'paper-elevation-24': 'rgba(30, 30, 30, 0.16)',
+      },
+      action: {
+        active: 'rgba(255, 255, 255, 0.54)',
+        hover: 'rgba(255, 255, 255, 0.04)',
+        selected: 'rgba(255, 255, 255, 0.08)',
+        disabledBackground: 'rgba(255, 255, 255, 0.12)',
+        focus: 'rgba(255, 255, 255, 0.12)',
+        disabled: 'rgba(255, 255, 255, 0.38)',
+      },
+      divider: 'rgba(255, 255, 255, 0.12)',
+      common: {
+        white: '#ffffff',
+        black: '#000000',
+      },
     },
   },
 };
@@ -400,20 +620,16 @@ const createBaseTheme = (colors: Partial<ThemeOptions['palette']> & { custom?: a
 });
 
 // Export themes
-export const rootTheme = createBaseTheme(rootColors);
-export const rmaxTheme = createBaseTheme(rmaxColors);
-export const loadaiTheme = createBaseTheme(loadaiColors);
-export const optymTheme = createBaseTheme(optymColors);
+export const lightTheme = createBaseTheme(lightColors);
+export const darkTheme = createBaseTheme(darkColors);
 
 // Theme type
-export type ThemeType = 'root' | 'rmax' | 'loadai' | 'optym';
+export type ThemeType = 'light' | 'dark';
 
 // Theme mapping
 export const themes: Record<ThemeType, Theme> = {
-  root: rootTheme,
-  rmax: rmaxTheme,
-  loadai: loadaiTheme,
-  optym: optymTheme,
+  light: lightTheme,
+  dark: darkTheme,
 };
 
 // Export design tokens for use in components
