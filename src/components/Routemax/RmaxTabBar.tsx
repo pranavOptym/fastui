@@ -143,12 +143,12 @@ export const RmaxTabBar: React.FC<RmaxTabBarProps> = ({
       </StyledTabs>
       </div>
       <div style={{display: 'flex', alignItems: 'center'}}>
+      {rightContent && <Box sx={{ ml: 2 }}>{rightContent}</Box>}
       {actions && (
         <Box sx={{ display: 'flex', alignItems: 'center', height: 56, gap: 1 }}>
           <RmaxTabBarActions {...actions} />
         </Box>
       )}
-      {rightContent && <Box sx={{ ml: 2 }}>{rightContent}</Box>}
       </div>
     </Box>
   );

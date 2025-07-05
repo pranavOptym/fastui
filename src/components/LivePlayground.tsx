@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { Alert, Box, Typography } from "@mui/material";
+import { Alert, Avatar, Box, Typography } from "@mui/material";
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from "react-live";
 import RmaxButton  from "./Routemax/RmaxButton";
 import * as Icons from "@mui/icons-material";
 import RmaxTabBar from "./Routemax/RmaxTabBar";
+import RmaxTabBarActions from "./Routemax/RmaxTabBarActions";
 
 // Types for EditorWithAutoScroll props
 interface EditorWithAutoScrollProps {

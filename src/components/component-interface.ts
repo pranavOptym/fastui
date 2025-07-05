@@ -22,6 +22,7 @@ export interface RmaxTabBarAction {
   onClick?: () => void;
   tooltip?: string;
   color?: string;
+  hoverColor?: string;
   key?: string;
 }
 

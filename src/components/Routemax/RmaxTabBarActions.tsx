@@ -17,7 +17,14 @@ const RmaxTabBarActions: React.FC<RmaxTabBarActionsProps> = ({
     <Box sx={{ display: 'flex', alignItems: 'center', gap: iconGap, ...sx }}>
       {actions.map((action, idx) => (
         <Tooltip title={action.tooltip || ''} key={action.key || idx}>
-          <IconButton onClick={action.onClick} size={iconSize} sx={action.color ? { color: action.color } : {}}>
+          <IconButton 
+            onClick={action.onClick} 
+            size={iconSize} 
+            sx={{ 
+              color: action.color, 
+              '&:hover': action.hoverColor ? { color: action.hoverColor } : undefined 
+            }}
+          >
             {action.icon}
           </IconButton>
         </Tooltip>
