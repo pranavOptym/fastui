@@ -39,13 +39,21 @@ const EditorWithAutoScroll = ({ code, onChange }: EditorWithAutoScrollProps) => 
   const editorContainerRef = useRef<HTMLDivElement>(null);
 
   const handleChange = (newCode: string) => {
+    const container = editorContainerRef.current;
+    const threshold = 20; // px
+    const nearBottom = container
+      ? container.scrollHeight - container.clientHeight - threshold <= container.scrollTop
+      : false;
+
     onChange(newCode);
-    setTimeout(() => {
-      const container = editorContainerRef.current;
-      if (container) {
-        container.scrollTop = container.scrollHeight;
-      }
-    }, 0);
+
+    if (nearBottom) {
+      setTimeout(() => {
+        if (container) {
+          container.scrollTop = container.scrollHeight;
+        }
+      }, 0);
+    }
   };
 
   return (
