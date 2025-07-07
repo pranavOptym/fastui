@@ -1,12 +1,12 @@
 "use client"
 
 import { Box, Container, Typography, Card, CardContent, Grid, Stack, Paper, Divider, Button } from "@mui/material"
-import { Button as CustomButton } from "@/components/Routemax/Button"
 import { Star, ArrowForward, Favorite, Download, Settings, Home } from "@mui/icons-material"
 import { useDesignTokens } from "@/hooks/useDesignTokens"
 import { useTheme } from "@/components/ThemeProvider"
 import { FigmaDesignTokens } from "@/components/FigmaDesignTokens"
 import Link from "next/link"
+import RmaxButton from "@/design-system/Routemax/RmaxButton"
 
 export default function DesignTokensDemo() {
   const tokens = useDesignTokens()
@@ -21,13 +21,13 @@ export default function DesignTokensDemo() {
       <Container maxWidth="lg">
         <Box sx={{ mb: 4 }}>
           <Link href="/" style={{ textDecoration: 'none' }}>
-            <CustomButton
+            <RmaxButton
               variant="outlined"
               leftIcon={<Home fontSize="small" />}
               sx={{ mb: 2 }}
             >
               Back to Home
-            </CustomButton>
+            </RmaxButton>
           </Link>
           
           <Typography 
@@ -133,21 +133,24 @@ export default function DesignTokensDemo() {
                   Button Variants Using Tokens
                 </Typography>
                 <Stack spacing={2}>
-                  <CustomButton variant="contained" color="primary" fullWidth>
+                  <RmaxButton variant="contained" color="primary" fullWidth>
                     Standard Contained
-                  </CustomButton>
-                  <CustomButton variant="outlined" color="primary" fullWidth>
+                  </RmaxButton>
+                  <RmaxButton variant="outlined" color="primary" fullWidth>
+                    <RmaxButton variant="outlined" color="primary" fullWidth>
+                      Standard Outlined
+                    </RmaxButton>
                     Standard Outlined
-                  </CustomButton>
-                  <CustomButton className="soft" fullWidth>
+                  </RmaxButton>
+                  <RmaxButton className="soft" fullWidth>
                     Soft Variant (Theme Token)
-                  </CustomButton>
-                  <CustomButton className="gradient" fullWidth>
+                  </RmaxButton>
+                  <RmaxButton className="gradient" fullWidth>
                     Gradient Variant (Theme Token)
-                  </CustomButton>
-                  <CustomButton className="glow" fullWidth>
+                  </RmaxButton>
+                  <RmaxButton className="glow" fullWidth>
                     Glow Effect (Theme Token)
-                  </CustomButton>
+                  </RmaxButton>
                 </Stack>
               </CardContent>
             </Card>

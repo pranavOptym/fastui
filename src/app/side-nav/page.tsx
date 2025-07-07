@@ -1,10 +1,12 @@
 "use client"
 
-import { Box, Container, Typography, Card, CardContent, Grid, Paper, Chip } from "@mui/material"
+import { Box, Container, Typography, Card, CardContent, Grid, Paper, Chip, Button } from "@mui/material"
 import SideNavPanel from "@/components/SideNavPanel"
 import { type NavItem } from "@/hooks/useNavState"
 import { useNavState } from "@/hooks/useNavState"
 import ReactLiveEditor from "@/components/ReactLiveEditor"
+import RmaxGrid from "@/design-system/Routemax/RmaxGrid"
+import { useRouter } from "next/navigation"
 
   // Component Registry - Central place to manage all components
   const componentRegistry = {
@@ -13,7 +15,8 @@ import ReactLiveEditor from "@/components/ReactLiveEditor"
       title: "RMAX Button Component",
       description: "A comprehensive, customizable button component with RMAX theme styling",
       theme: "theme-rmax",
-      component: 'button',
+      componentName: 'button',
+      component: null,
   },
 
   // Form Component (placeholder for future implementation)
@@ -21,16 +24,57 @@ import ReactLiveEditor from "@/components/ReactLiveEditor"
     title: "RMAX Tab Bar Component",
     description: "Tab bar components with validation",
     theme: "theme-rmax",
-    component: 'tabBar', // Will be implemented later
+    componentName: 'tabBar',
+    component: null,
   },
 
-  // Login Page Component (placeholder)
-  "bu-1-custom-login-page": {
-    title: "Login Page Component",
-    description: "A comprehensive login form with validation and theme support",
-    theme: "theme-rmax",
+  "bu-1-design-verticalDividerGroup": {
+    title: "optym Vertical Divider Group Component",
+    description: "Vertical divider group components with validation",
+    theme: "theme-optym",
+    componentName: 'verticalDividerGroup', // Will be implemented later
     component: null,
-  }
+  },
+
+  "bu-1-design-grid": {
+    title: "RMAX Grid Component",
+    description: "A comprehensive, customizable grid component with RMAX theme styling",
+    theme: "theme-rmax",
+    componentName: 'grid',
+    component: null,
+  },
+  // NEW: Donut Chart Component
+  "bu-1-design-donutChart": {
+    title: "Donut Chart Component",
+    description: "A customizable donut chart component for data visualization",
+    theme: "theme-rmax",
+    componentName: 'donutChart',
+    component: null,
+  },
+  // NEW: Pie Chart Component
+  "bu-1-design-pieChart": {
+    title: "Pie Chart Component",
+    description: "A simple pie chart component for proportional data",
+    theme: "theme-rmax",
+    componentName: 'pieChart',
+    component: null,
+  },
+  // NEW: Multi Ring Gauge Component
+  "bu-1-design-multiRingGauge": {
+    title: "Multi Ring Gauge Component",
+    description: "A gauge chart with multiple rings to represent various KPIs",
+    theme: "theme-rmax",
+    componentName: 'multiRingGauge',
+    component: null,
+  },
+  // NEW: Slider Chart Component
+  "bu-1-design-sliderChart": {
+    title: "Slider Chart Component",
+    description: "Interactive slider chart for metric selection",
+    theme: "theme-rmax",
+    componentName: 'sliderChart',
+    component: null,
+  },
 }
 
 const navData = [
@@ -50,6 +94,19 @@ const navData = [
             id: "bu-1-design-tabBar",
             label: "Tab Bar",
           },
+          {
+            id: "bu-1-design-verticalDividerGroup",
+            label: "Vertical Divider Group",
+          },
+          {
+            id: "bu-1-design-grid",
+            label: "Grid",
+          },
+          // NEW NAV ITEMS
+          { id: "bu-1-design-donutChart", label: "Donut Chart" },
+          { id: "bu-1-design-pieChart", label: "Pie Chart" },
+          { id: "bu-1-design-multiRingGauge", label: "Multi Ring Gauge" },
+          { id: "bu-1-design-sliderChart", label: "Slider Chart" }
         ]
       },
       {
@@ -81,10 +138,10 @@ const navData = [
 
 export default function SideNavDemo() {
   const { activeItem, setActive, findItem } = useNavState(navData)
+  const router = useRouter()
 
   const handleItemSelect = (item: NavItem) => {
     setActive(item.id)
-    console.log("Selected item:", item)
     
     // Set theme based on selected component
     if (componentRegistry[item.id as keyof typeof componentRegistry]) {
@@ -131,7 +188,8 @@ export default function SideNavDemo() {
     if (componentRegistry[activeItem as keyof typeof componentRegistry]) {
       const componentId = activeItem;
       const componentData = componentRegistry[componentId as keyof typeof componentRegistry];
-      const { title, description, component } = componentData;
+      const { title, description, component, componentName } = componentData;
+      
       return (
       <div>
         <Box sx={{ p: 3, height: '100%', minHeight: 0, display: 'flex', flexDirection: 'column', flex: 1 }}>
@@ -141,7 +199,7 @@ export default function SideNavDemo() {
           <Typography variant="h6" color="text.secondary" sx={{ mb: 4 }}>
             {description}
           </Typography>
-          <ReactLiveEditor componentType={component as 'button' | 'tabBar'} />
+          {component ? component : <ReactLiveEditor componentType={componentName as any} />}
         </Box>
         </div>
       )
@@ -166,6 +224,10 @@ export default function SideNavDemo() {
     <Box sx={{ display: 'flex', height: '100vh', minHeight: 0 }}>
       <SideNavPanel data={navData} onItemSelect={handleItemSelect}/>
       <Box sx={{ flex: 1, overflow: 'auto', bgcolor: 'background.default', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+        {/* Header */}
+        <Box sx={{ p: 2, display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+          <Button variant="contained" onClick={() => router.push('/playground')}>Playground</Button>
+        </Box>
         <Container maxWidth="xl" sx={{ py: 4, flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column' }}>
           {renderComponent()}
         </Container>

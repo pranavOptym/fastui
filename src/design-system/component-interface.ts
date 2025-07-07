@@ -32,3 +32,34 @@ export interface RmaxTabBarActionsProps {
   iconSize?: 'small' | 'medium' | 'large';
   gap?: number;
 }
+
+export interface RmaxGridProps {
+  /**
+   * Column definitions for AG Grid. If not provided, a default 3-column grid is shown.
+   */
+  columns?: any[];
+  /**
+   * Row data for AG Grid. If not provided, a default 2-row grid is shown.
+   */
+  rows?: any[];
+  /**
+   * Callback when row data changes (e.g. add/remove row/col). Receives new row data.
+   */
+  onRowsChange?: (rows: any[]) => void;
+  /**
+   * Callback when column definitions change (e.g. add/remove col). Receives new columns.
+   */
+  onColumnsChange?: (columns: any[]) => void;
+  /**
+   * Hide the built-in toolbar (for full custom control)
+   */
+  hideToolbar?: boolean;
+  /**
+   * Height of the grid (default 400)
+   */
+  height?: number | string;
+  /**
+   * Any extra props for AgGridReact
+   */
+  agGridProps?: any;
+}

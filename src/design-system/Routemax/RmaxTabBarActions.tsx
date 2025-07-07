@@ -4,6 +4,7 @@ import React from "react";
 import { Box, IconButton, Tooltip } from "@mui/material";
 import { SxProps, Theme } from "@mui/material/styles";
 import { RmaxTabBarActionsProps } from "../component-interface";
+import VerticalDividerGroup from "../VerticalDividerGroup";
 
 
 const RmaxTabBarActions: React.FC<RmaxTabBarActionsProps> = ({
@@ -15,6 +16,7 @@ const RmaxTabBarActions: React.FC<RmaxTabBarActionsProps> = ({
   const iconGap = gap !== undefined ? gap : 1;
   return (
     <Box sx={{ display: 'flex', alignItems: 'center', gap: iconGap, ...sx }}>
+      <VerticalDividerGroup dividerHeight={32} dividerMargin={16}>
       {actions.map((action, idx) => (
         <Tooltip title={action.tooltip || ''} key={action.key || idx}>
           <IconButton 
@@ -29,6 +31,7 @@ const RmaxTabBarActions: React.FC<RmaxTabBarActionsProps> = ({
           </IconButton>
         </Tooltip>
       ))}
+      </VerticalDividerGroup>
     </Box>
   );
 };

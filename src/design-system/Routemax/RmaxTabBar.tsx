@@ -5,6 +5,7 @@ import { Tabs, Tab, Box, styled, TabsProps as MuiTabsProps, TabProps as MuiTabPr
 import { SxProps, Theme } from "@mui/material/styles";
 import RmaxTabBarActions from "./RmaxTabBarActions";
 import { RmaxTabBarActionsProps } from "../component-interface";
+import VerticalDividerGroup from "../VerticalDividerGroup";
 
 // Custom props for the tab bar
 export interface RmaxTabBarProps extends MuiTabsProps {
@@ -143,12 +144,14 @@ export const RmaxTabBar: React.FC<RmaxTabBarProps> = ({
       </StyledTabs>
       </div>
       <div style={{display: 'flex', alignItems: 'center'}}>
+      <VerticalDividerGroup dividerHeight={32} dividerMargin={16}>
       {rightContent && <Box sx={{ ml: 2 }}>{rightContent}</Box>}
       {actions && (
         <Box sx={{ display: 'flex', alignItems: 'center', height: 56, gap: 1 }}>
           <RmaxTabBarActions {...actions} />
         </Box>
       )}
+      </VerticalDividerGroup>
       </div>
     </Box>
   );

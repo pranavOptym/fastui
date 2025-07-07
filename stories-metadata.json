@@ -1,0 +1,579 @@
+{
+  "DonutChart": {
+    "title": "Design System/Charts/DonutChart",
+    "importPath": "./src/design-system/DonutChart.stories.tsx",
+    "kind": "Design System/Charts/DonutChart",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-charts-donutchart--docs",
+        "title": "Design System/Charts/DonutChart",
+        "name": "Docs",
+        "importPath": "./src/design-system/DonutChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Charts/DonutChart",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-charts-donutchart--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/DonutChart.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-charts-donutchart--default",
+        "name": "Default",
+        "title": "Design System/Charts/DonutChart",
+        "importPath": "./src/design-system/DonutChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/DonutChart",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-charts-donutchart--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/DonutChart.stories.tsx"
+        },
+        "snippet": "export const Default: Story = {\n  args: {\n    segments: [\n      { value: 40, color: '#FF6384' },\n      { value: 30, color: '#36A2EB' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#4BC0C0' },\n    ],\n    size: 200,\n    label: '100',\n    subLabel: 'Total',\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <DonutChart {...{\n    segments: [\n      { value: 40, color: '#FF6384' },\n      { value: 30, color: '#36A2EB' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#4BC0C0' },\n    ],\n    size: 200,\n    label: '100',\n    subLabel: 'Total',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport DonutChart, { DonutChartProps } from './DonutChart';\n\nconst meta: Meta<DonutChartProps> = {\n  title: 'Design System/Charts/DonutChart',\n  component: DonutChart,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<DonutChartProps>;\n\nexport const Default: Story = {\n  args: {\n    segments: [\n      { value: 40, color: '#FF6384' },\n      { value: 30, color: '#36A2EB' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#4BC0C0' },\n    ],\n    size: 200,\n    label: '100',\n    subLabel: 'Total',\n  },\n}; "
+  },
+  "GaugeChartOrbit": {
+    "title": "Design System/Charts/GaugeChartOrbit",
+    "importPath": "./src/design-system/GaugeChartOrbit.stories.tsx",
+    "kind": "Design System/Charts/GaugeChartOrbit",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-charts-gaugechartorbit--docs",
+        "title": "Design System/Charts/GaugeChartOrbit",
+        "name": "Docs",
+        "importPath": "./src/design-system/GaugeChartOrbit.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Charts/GaugeChartOrbit",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-charts-gaugechartorbit--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/GaugeChartOrbit.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-charts-gaugechartorbit--pointer",
+        "name": "Pointer",
+        "title": "Design System/Charts/GaugeChartOrbit",
+        "importPath": "./src/design-system/GaugeChartOrbit.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/GaugeChartOrbit",
+        "story": "Pointer",
+        "parameters": {
+          "__id": "design-system-charts-gaugechartorbit--pointer",
+          "docsOnly": false,
+          "fileName": "./src/design-system/GaugeChartOrbit.stories.tsx"
+        },
+        "snippet": "export const Pointer: Story = {\n  args: {\n    value: 65,\n    min: 0,\n    max: 120,\n    label: 'Speed',\n    subLabel: 'mph',\n  },\n};\n",
+        "example": "const PointerExample = () => (\n  <GaugeChartOrbit {...{\n    value: 65,\n    min: 0,\n    max: 120,\n    label: 'Speed',\n    subLabel: 'mph',\n  },\n}} />\n);"
+      },
+      {
+        "id": "design-system-charts-gaugechartorbit--segments",
+        "name": "Segments",
+        "title": "Design System/Charts/GaugeChartOrbit",
+        "importPath": "./src/design-system/GaugeChartOrbit.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/GaugeChartOrbit",
+        "story": "Segments",
+        "parameters": {
+          "__id": "design-system-charts-gaugechartorbit--segments",
+          "docsOnly": false,
+          "fileName": "./src/design-system/GaugeChartOrbit.stories.tsx"
+        },
+        "snippet": "export const Segments: Story = {\n  args: {\n    segments: [\n      { value: 30, color: '#47A9F6' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#FF6384' },\n    ],\n    label: 'Usage',\n  },\n}; ",
+        "example": "const SegmentsExample = () => (\n  <GaugeChartOrbit {...{\n    segments: [\n      { value: 30, color: '#47A9F6' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#FF6384' },\n    ],\n    label: 'Usage',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport GaugeChartOrbit, { GaugeChartOrbitProps } from './GaugeChartOrbit';\n\nconst meta: Meta<GaugeChartOrbitProps> = {\n  title: 'Design System/Charts/GaugeChartOrbit',\n  component: GaugeChartOrbit,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<GaugeChartOrbitProps>;\n\nexport const Pointer: Story = {\n  args: {\n    value: 65,\n    min: 0,\n    max: 120,\n    label: 'Speed',\n    subLabel: 'mph',\n  },\n};\n\nexport const Segments: Story = {\n  args: {\n    segments: [\n      { value: 30, color: '#47A9F6' },\n      { value: 20, color: '#FFCE56' },\n      { value: 10, color: '#FF6384' },\n    ],\n    label: 'Usage',\n  },\n}; "
+  },
+  "MultiRingGauge": {
+    "title": "Design System/Charts/MultiRingGauge",
+    "importPath": "./src/design-system/MultiRingGauge.stories.tsx",
+    "kind": "Design System/Charts/MultiRingGauge",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-charts-multiringgauge--docs",
+        "title": "Design System/Charts/MultiRingGauge",
+        "name": "Docs",
+        "importPath": "./src/design-system/MultiRingGauge.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Charts/MultiRingGauge",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-charts-multiringgauge--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/MultiRingGauge.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-charts-multiringgauge--default",
+        "name": "Default",
+        "title": "Design System/Charts/MultiRingGauge",
+        "importPath": "./src/design-system/MultiRingGauge.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/MultiRingGauge",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-charts-multiringgauge--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/MultiRingGauge.stories.tsx"
+        },
+        "snippet": "export const Default: Story = {\n  args: {\n    rings: [\n      { progress: 0.8, color: '#47A9F6' },\n      { progress: 0.6, color: '#FFCE56' },\n      { progress: 0.4, color: '#4BC0C0' },\n    ],\n    label: '3/5',\n    subLabel: 'tasks',\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <MultiRingGauge {...{\n    rings: [\n      { progress: 0.8, color: '#47A9F6' },\n      { progress: 0.6, color: '#FFCE56' },\n      { progress: 0.4, color: '#4BC0C0' },\n    ],\n    label: '3/5',\n    subLabel: 'tasks',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport MultiRingGauge, { MultiRingGaugeProps } from './MultiRingGauge';\n\nconst meta: Meta<MultiRingGaugeProps> = {\n  title: 'Design System/Charts/MultiRingGauge',\n  component: MultiRingGauge,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<MultiRingGaugeProps>;\n\nexport const Default: Story = {\n  args: {\n    rings: [\n      { progress: 0.8, color: '#47A9F6' },\n      { progress: 0.6, color: '#FFCE56' },\n      { progress: 0.4, color: '#4BC0C0' },\n    ],\n    label: '3/5',\n    subLabel: 'tasks',\n  },\n}; "
+  },
+  "PieChart": {
+    "title": "Design System/Charts/PieChart",
+    "importPath": "./src/design-system/PieChart.stories.tsx",
+    "kind": "Design System/Charts/PieChart",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-charts-piechart--docs",
+        "title": "Design System/Charts/PieChart",
+        "name": "Docs",
+        "importPath": "./src/design-system/PieChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Charts/PieChart",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-charts-piechart--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/PieChart.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-charts-piechart--default",
+        "name": "Default",
+        "title": "Design System/Charts/PieChart",
+        "importPath": "./src/design-system/PieChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/PieChart",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-charts-piechart--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/PieChart.stories.tsx"
+        },
+        "snippet": "export const Default: Story = {\n  args: {\n    segments: [\n      { value: 50, color: '#47A9F6' },\n      { value: 30, color: '#FFCE56' },\n      { value: 20, color: '#FF6384' },\n    ],\n    label: 'Report',\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <PieChart {...{\n    segments: [\n      { value: 50, color: '#47A9F6' },\n      { value: 30, color: '#FFCE56' },\n      { value: 20, color: '#FF6384' },\n    ],\n    label: 'Report',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport PieChart, { PieChartProps } from './PieChart';\n\nconst meta: Meta<PieChartProps> = {\n  title: 'Design System/Charts/PieChart',\n  component: PieChart,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<PieChartProps>;\n\nexport const Default: Story = {\n  args: {\n    segments: [\n      { value: 50, color: '#47A9F6' },\n      { value: 30, color: '#FFCE56' },\n      { value: 20, color: '#FF6384' },\n    ],\n    label: 'Report',\n  },\n}; "
+  },
+  "RmaxButton": {
+    "title": "Design System/Routemax/RmaxButton",
+    "importPath": "./src/design-system/Routemax/RmaxButton.stories.tsx",
+    "kind": "Design System/Routemax/RmaxButton",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-routemax-rmaxbutton--docs",
+        "title": "Design System/Routemax/RmaxButton",
+        "name": "Docs",
+        "importPath": "./src/design-system/Routemax/RmaxButton.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Routemax/RmaxButton",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxbutton--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/Routemax/RmaxButton.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-routemax-rmaxbutton--primary",
+        "name": "Primary",
+        "title": "Design System/Routemax/RmaxButton",
+        "importPath": "./src/design-system/Routemax/RmaxButton.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxButton",
+        "story": "Primary",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxbutton--primary",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxButton.stories.tsx"
+        },
+        "snippet": "export const Primary: Story = {\n  args: {\n    variant: 'primary',\n    children: 'Primary Button',\n  },\n};\n",
+        "example": "const PrimaryExample = () => (\n  <RmaxButton {...{\n    variant: 'primary',\n    children: 'Primary Button',\n  },\n}} />\n);"
+      },
+      {
+        "id": "design-system-routemax-rmaxbutton--outlined",
+        "name": "Outlined",
+        "title": "Design System/Routemax/RmaxButton",
+        "importPath": "./src/design-system/Routemax/RmaxButton.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxButton",
+        "story": "Outlined",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxbutton--outlined",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxButton.stories.tsx"
+        },
+        "snippet": "export const Outlined: Story = {\n  args: {\n    variant: 'outlined',\n    children: 'Outlined Button',\n  },\n};\n",
+        "example": "const OutlinedExample = () => (\n  <RmaxButton {...{\n    variant: 'outlined',\n    children: 'Outlined Button',\n  },\n}} />\n);"
+      },
+      {
+        "id": "design-system-routemax-rmaxbutton--text",
+        "name": "Text",
+        "title": "Design System/Routemax/RmaxButton",
+        "importPath": "./src/design-system/Routemax/RmaxButton.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxButton",
+        "story": "Text",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxbutton--text",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxButton.stories.tsx"
+        },
+        "snippet": "export const Text: Story = {\n  args: {\n    variant: 'text',\n    children: 'Text Button',\n  },\n}; ",
+        "example": "const TextExample = () => (\n  <RmaxButton {...{\n    variant: 'text',\n    children: 'Text Button',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport RmaxButton from './RmaxButton';\n\nconst meta: Meta<any> = {\n  title: 'Design System/Routemax/RmaxButton',\n  component: RmaxButton,\n  tags: ['autodocs'],\n  argTypes: { onClick: { action: 'clicked' } },\n};\nexport default meta;\n\ntype Story = StoryObj<any>;\n\nexport const Primary: Story = {\n  args: {\n    variant: 'primary',\n    children: 'Primary Button',\n  },\n};\n\nexport const Outlined: Story = {\n  args: {\n    variant: 'outlined',\n    children: 'Outlined Button',\n  },\n};\n\nexport const Text: Story = {\n  args: {\n    variant: 'text',\n    children: 'Text Button',\n  },\n}; "
+  },
+  "RmaxGrid": {
+    "title": "Design System/Routemax/RmaxGrid",
+    "importPath": "./src/design-system/Routemax/RmaxGrid.stories.tsx",
+    "kind": "Design System/Routemax/RmaxGrid",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-routemax-rmaxgrid--docs",
+        "title": "Design System/Routemax/RmaxGrid",
+        "name": "Docs",
+        "importPath": "./src/design-system/Routemax/RmaxGrid.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Routemax/RmaxGrid",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxgrid--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/Routemax/RmaxGrid.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-routemax-rmaxgrid--default",
+        "name": "Default",
+        "title": "Design System/Routemax/RmaxGrid",
+        "importPath": "./src/design-system/Routemax/RmaxGrid.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxGrid",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxgrid--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxGrid.stories.tsx"
+        },
+        "snippet": "export const Default = {\n  args: {\n    columns: [\n      { headerName: 'Make', field: 'make' },\n      { headerName: 'Model', field: 'model' },\n      { headerName: 'Price', field: 'price' },\n    ],\n    rows: [\n      { make: 'Toyota', model: 'Celica', price: 35000 },\n      { make: 'Ford', model: 'Mondeo', price: 32000 },\n    ],\n    height: 300,\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <RmaxGrid {...{\n    columns: [\n      { headerName: 'Make', field: 'make' },\n      { headerName: 'Model', field: 'model' },\n      { headerName: 'Price', field: 'price' },\n    ],\n    rows: [\n      { make: 'Toyota', model: 'Celica', price: 35000 },\n      { make: 'Ford', model: 'Mondeo', price: 32000 },\n    ],\n    height: 300,\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import RmaxGrid from './RmaxGrid';\n\nconst meta = {\n  title: 'Design System/Routemax/RmaxGrid',\n  component: RmaxGrid,\n  tags: ['autodocs'],\n};\nexport default meta;\n\nexport const Default = {\n  args: {\n    columns: [\n      { headerName: 'Make', field: 'make' },\n      { headerName: 'Model', field: 'model' },\n      { headerName: 'Price', field: 'price' },\n    ],\n    rows: [\n      { make: 'Toyota', model: 'Celica', price: 35000 },\n      { make: 'Ford', model: 'Mondeo', price: 32000 },\n    ],\n    height: 300,\n  },\n}; "
+  },
+  "RmaxTabBar": {
+    "title": "Design System/Routemax/RmaxTabBar",
+    "importPath": "./src/design-system/Routemax/RmaxTabBar.stories.tsx",
+    "kind": "Design System/Routemax/RmaxTabBar",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-routemax-rmaxtabbar--docs",
+        "title": "Design System/Routemax/RmaxTabBar",
+        "name": "Docs",
+        "importPath": "./src/design-system/Routemax/RmaxTabBar.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Routemax/RmaxTabBar",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxtabbar--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/Routemax/RmaxTabBar.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-routemax-rmaxtabbar--default",
+        "name": "Default",
+        "title": "Design System/Routemax/RmaxTabBar",
+        "importPath": "./src/design-system/Routemax/RmaxTabBar.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxTabBar",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxtabbar--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxTabBar.stories.tsx"
+        },
+        "snippet": "export const Default: Story = {\n  render: (args: RmaxTabBarProps) => {\n    const [value, setValue] = React.useState(args.value);\n    return <RmaxTabBar {...args} value={value} onChange={(e, v) => setValue(v)} />;\n  },\n  args: {\n    value: 'overview',\n    tabs: [\n      { label: 'Overview', value: 'overview' },\n      { label: 'Details', value: 'details' },\n      { label: 'Settings', value: 'settings', disabled: true },\n    ],\n    actions: {\n      actions: [\n        { icon: <Upload />, tooltip: 'Upload', onClick: () => {}, color: 'white', hoverColor: 'white' },\n        { icon: <Settings />, tooltip: 'Settings', onClick: () => {}, color: 'white', hoverColor: 'white' },\n      ],\n      iconSize: 'small',\n      gap: 1,\n    },\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <React {...{\n    value: 'overview',\n    tabs: [\n      { label: 'Overview', value: 'overview' },\n      { label: 'Details', value: 'details' },\n      { label: 'Settings', value: 'settings', disabled: true },\n    ],\n    actions: {\n      actions: [\n        { icon: <Upload />, tooltip: 'Upload', onClick: () => {}, color: 'white', hoverColor: 'white' },\n        { icon: <Settings />, tooltip: 'Settings', onClick: () => {}, color: 'white', hoverColor: 'white' },\n      ],\n      iconSize: 'small',\n      gap: 1,\n    },\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport React from 'react';\nimport RmaxTabBar, { RmaxTabBarProps } from './RmaxTabBar';\n\nimport { Upload, Settings } from '@mui/icons-material';\n\nconst meta: Meta<RmaxTabBarProps> = {\n  title: 'Design System/Routemax/RmaxTabBar',\n  component: RmaxTabBar,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<RmaxTabBarProps>;\n\nexport const Default: Story = {\n  render: (args: RmaxTabBarProps) => {\n    const [value, setValue] = React.useState(args.value);\n    return <RmaxTabBar {...args} value={value} onChange={(e, v) => setValue(v)} />;\n  },\n  args: {\n    value: 'overview',\n    tabs: [\n      { label: 'Overview', value: 'overview' },\n      { label: 'Details', value: 'details' },\n      { label: 'Settings', value: 'settings', disabled: true },\n    ],\n    actions: {\n      actions: [\n        { icon: <Upload />, tooltip: 'Upload', onClick: () => {}, color: 'white', hoverColor: 'white' },\n        { icon: <Settings />, tooltip: 'Settings', onClick: () => {}, color: 'white', hoverColor: 'white' },\n      ],\n      iconSize: 'small',\n      gap: 1,\n    },\n  },\n}; "
+  },
+  "RmaxTabBarActions": {
+    "title": "Design System/Routemax/RmaxTabBarActions",
+    "importPath": "./src/design-system/Routemax/RmaxTabBarActions.stories.tsx",
+    "kind": "Design System/Routemax/RmaxTabBarActions",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-routemax-rmaxtabbaractions--docs",
+        "title": "Design System/Routemax/RmaxTabBarActions",
+        "name": "Docs",
+        "importPath": "./src/design-system/Routemax/RmaxTabBarActions.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Routemax/RmaxTabBarActions",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxtabbaractions--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/Routemax/RmaxTabBarActions.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-routemax-rmaxtabbaractions--default",
+        "name": "Default",
+        "title": "Design System/Routemax/RmaxTabBarActions",
+        "importPath": "./src/design-system/Routemax/RmaxTabBarActions.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Routemax/RmaxTabBarActions",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-routemax-rmaxtabbaractions--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/Routemax/RmaxTabBarActions.stories.tsx"
+        },
+        "snippet": "export const Default = {\n  args: {\n    actions: [\n      { icon: <UploadIcon />, tooltip: 'Upload', onClick: () => {} },\n      { icon: <SettingsIcon />, tooltip: 'Settings', onClick: () => {} },\n    ],\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <RmaxTabBarActions {...{\n    actions: [\n      { icon: <UploadIcon />, tooltip: 'Upload', onClick: () => {} },\n      { icon: <SettingsIcon />, tooltip: 'Settings', onClick: () => {} },\n    ],\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta } from '@storybook/react';\nimport RmaxTabBarActions from './RmaxTabBarActions';\nimport UploadIcon from '@mui/icons-material/Upload';\nimport SettingsIcon from '@mui/icons-material/Settings';\n\nconst meta: Meta = {\n  title: 'Design System/Routemax/RmaxTabBarActions',\n  component: RmaxTabBarActions,\n  tags: ['autodocs'],\n  argTypes: {\n    actions: { control: { type: 'object' } },\n  },\n};\nexport default meta;\n\nexport const Default = {\n  args: {\n    actions: [\n      { icon: <UploadIcon />, tooltip: 'Upload', onClick: () => {} },\n      { icon: <SettingsIcon />, tooltip: 'Settings', onClick: () => {} },\n    ],\n  },\n}; "
+  },
+  "SliderChart": {
+    "title": "Design System/Charts/SliderChart",
+    "importPath": "./src/design-system/SliderChart.stories.tsx",
+    "kind": "Design System/Charts/SliderChart",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-charts-sliderchart--docs",
+        "title": "Design System/Charts/SliderChart",
+        "name": "Docs",
+        "importPath": "./src/design-system/SliderChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Charts/SliderChart",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-charts-sliderchart--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/SliderChart.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-charts-sliderchart--default",
+        "name": "Default",
+        "title": "Design System/Charts/SliderChart",
+        "importPath": "./src/design-system/SliderChart.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Charts/SliderChart",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-charts-sliderchart--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/SliderChart.stories.tsx"
+        },
+        "snippet": "export const Default: Story = {\n  args: {\n    value: 45,\n    min: 0,\n    max: 100,\n    label: 'Score',\n  },\n}; ",
+        "example": "const DefaultExample = () => (\n  <SliderChart {...{\n    value: 45,\n    min: 0,\n    max: 100,\n    label: 'Score',\n  },\n}} />\n);"
+      }
+    ],
+    "source": "import type { Meta, StoryObj } from '@storybook/react';\nimport SliderChart, { SliderChartProps } from './SliderChart';\n\nconst meta: Meta<SliderChartProps> = {\n  title: 'Design System/Charts/SliderChart',\n  component: SliderChart,\n  tags: ['autodocs'],\n};\nexport default meta;\n\ntype Story = StoryObj<SliderChartProps>;\n\nexport const Default: Story = {\n  args: {\n    value: 45,\n    min: 0,\n    max: 100,\n    label: 'Score',\n  },\n}; "
+  },
+  "VerticalDividerGroup": {
+    "title": "Design System/Utilities/VerticalDividerGroup",
+    "importPath": "./src/design-system/VerticalDividerGroup.stories.tsx",
+    "kind": "Design System/Utilities/VerticalDividerGroup",
+    "tags": [
+      "autodocs",
+      "docs",
+      "story"
+    ],
+    "stories": [
+      {
+        "id": "design-system-utilities-verticaldividergroup--docs",
+        "title": "Design System/Utilities/VerticalDividerGroup",
+        "name": "Docs",
+        "importPath": "./src/design-system/VerticalDividerGroup.stories.tsx",
+        "tags": [
+          "autodocs",
+          "docs"
+        ],
+        "storiesImports": [],
+        "kind": "Design System/Utilities/VerticalDividerGroup",
+        "story": "Docs",
+        "parameters": {
+          "__id": "design-system-utilities-verticaldividergroup--docs",
+          "docsOnly": true,
+          "fileName": "./src/design-system/VerticalDividerGroup.stories.tsx"
+        },
+        "snippet": "",
+        "example": ""
+      },
+      {
+        "id": "design-system-utilities-verticaldividergroup--default",
+        "name": "Default",
+        "title": "Design System/Utilities/VerticalDividerGroup",
+        "importPath": "./src/design-system/VerticalDividerGroup.stories.tsx",
+        "tags": [
+          "autodocs",
+          "story"
+        ],
+        "kind": "Design System/Utilities/VerticalDividerGroup",
+        "story": "Default",
+        "parameters": {
+          "__id": "design-system-utilities-verticaldividergroup--default",
+          "docsOnly": false,
+          "fileName": "./src/design-system/VerticalDividerGroup.stories.tsx"
+        },
+        "snippet": "export const Default = {\n  render: () => (\n    <VerticalDividerGroup dividerHeight={32}>\n      <Typography variant=\"body1\">Item One</Typography>\n      <Typography variant=\"body1\">Item Two</Typography>\n      <Typography variant=\"body1\">Item Three</Typography>\n    </VerticalDividerGroup>\n  ),\n}; ",
+        "example": ""
+      }
+    ],
+    "source": "import type { Meta } from '@storybook/react';\nimport VerticalDividerGroup from './VerticalDividerGroup';\nimport { Typography } from '@mui/material';\n\nconst meta: Meta = {\n  title: 'Design System/Utilities/VerticalDividerGroup',\n  component: VerticalDividerGroup,\n  tags: ['autodocs'],\n};\nexport default meta;\n\nexport const Default = {\n  render: () => (\n    <VerticalDividerGroup dividerHeight={32}>\n      <Typography variant=\"body1\">Item One</Typography>\n      <Typography variant=\"body1\">Item Two</Typography>\n      <Typography variant=\"body1\">Item Three</Typography>\n    </VerticalDividerGroup>\n  ),\n}; "
+  }
+}

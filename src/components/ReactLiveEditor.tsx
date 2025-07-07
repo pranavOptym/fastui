@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { Box } from '@mui/material';
 import LivePlayground from './LivePlayground';
 interface ReactLiveEditorProps {
-  componentType: 'button' | 'tabBar';
+  componentType: 'button' | 'tabBar' | 'grid' | 'verticalDividerGroup' | 'donutChart' | 'pieChart' | 'multiRingGauge' | 'sliderChart';
 }
 
 export const ReactLiveEditor: React.FC<ReactLiveEditorProps> = ({ componentType }) => {
@@ -124,7 +124,8 @@ export const ReactLiveEditor: React.FC<ReactLiveEditorProps> = ({ componentType 
     </div>
   </form>
 </div>`,
-tabBar: `<RmaxTabBar
+tabBar: `
+<RmaxTabBar
   tabs={[{ label: 'Tab 1', value: 'tab1' }, { label: 'Tab 2', value: 'tab2' }]}
   value="tab1"
   onChange={(event, value) => console.log(value)}
@@ -136,11 +137,75 @@ tabBar: `<RmaxTabBar
       { icon: <Cached />, onClick: () => console.log('cached') },
     ]
   }}
-/>`
+/>`,
+verticalDividerGroup: `<VerticalDividerGroup dividerColor="red" dividerHeight={32} dividerMargin={16}>
+  <div>Content 1</div>
+  <div>Content 2</div>
+  <div>Content 3</div>
+</VerticalDividerGroup>`,
+grid: `
+<div style={{width: '50vh'}}>
+<RmaxGrid
+        columns={[
+          { headerName: 'Make', field: 'make' },
+          { headerName: 'Model', field: 'model' },
+          { headerName: 'Price', field: 'price' },
+        ]}
+        rows={[
+          { make: 'Toyota', model: 'Celica', price: 35000 },
+          { make: 'Ford', model: 'Mondeo', price: 32000 },
+        ]}
+        height={300}
+      />
+</div>
+`,
+    // NEW: Donut Chart
+    donutChart: `<DonutChart
+  segments={[
+    { value: 30, color: '#47A9F6' },
+    { value: 45, color: '#34D399' },
+    { value: 25, color: '#F59E0B' },
+  ]}
+  label="Sales"
+  subLabel="$120k"
+/>`,
+    // NEW: Pie Chart
+    pieChart: `<PieChart
+  segments={[
+    { value: 40, color: '#EF4444' },
+    { value: 30, color: '#3B82F6' },
+    { value: 30, color: '#10B981' },
+  ]}
+  label="Users"
+  subLabel="1.2k"
+/>`,
+    // NEW: Multi Ring Gauge
+    multiRingGauge: `<MultiRingGauge
+  rings={[
+    { progress: 0.72, color: '#47A9F6' },
+    { progress: 0.55, color: '#F59E0B' },
+    { progress: 0.32, color: '#34D399' },
+  ]}
+  label="Overall"
+  subLabel="72%"
+/>`,
+    // NEW: Slider Chart
+    sliderChart: `<SliderChart
+  size={280}
+  min={0}
+  max={120}
+  pointerColor="#3C8EF2"
+  ticks={[0, 30, 60, 90, 120]}
+  formatSubLabel={(v) => v.toFixed(0) + ' min'}
+  label="Time Spent"
+/>`,
   };
 
 
   const [code, setCode] = useState(defaultCode[componentType]);
+
+  console.log(componentType, code);
+  
 
   useEffect(() => {
     setCode(defaultCode[componentType]);

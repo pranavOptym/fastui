@@ -1,0 +1,576 @@
+Component: DonutChart
+Import: src/design-system/DonutChart.tsx
+
+Props:
+  -- segments
+  -- Prop Values: Type: DonutChartSegment[]
+  -- Prop description: Array of segment definitions
+
+  -- size
+  -- Prop Values: Default: 200
+  -- Prop description: Diameter of the chart in px
+
+  -- thickness
+  -- Prop Values: Default: 18
+  -- Prop description: Stroke thickness in px
+
+  -- rounded
+  -- Prop Values: Default: true
+  -- Prop description: Round line cap for segments
+
+  -- label
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Main label displayed at the centre
+
+  -- subLabel
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Secondary label under the main label
+
+  -- labelFontSize
+  -- Prop Values: Default: 26
+  -- Prop description: Font size (px) for main label
+
+  -- subLabelFontSize
+  -- Prop Values: Default: 16
+  -- Prop description: Font size (px) for sub-label
+
+Example:
+const DefaultExample = () => (
+  <DonutChart {...{
+    segments: [
+      { value: 40, color: '#FF6384' },
+      { value: 30, color: '#36A2EB' },
+      { value: 20, color: '#FFCE56' },
+      { value: 10, color: '#4BC0C0' },
+    ],
+    size: 200,
+    label: '100',
+    subLabel: 'Total',
+  },
+}} />
+);
+
+
+Component: GaugeChartOrbit
+Import: src/design-system/GaugeChartOrbit.tsx
+
+Props:
+  -- size
+  -- Prop Values: Default: 192
+  -- Prop description: Size of the outer diameter in px
+
+  -- thickness
+  -- Prop Values: Default: 18
+  -- Prop description: Thickness of the gauge arc
+
+  -- segments
+  -- Prop Values: Type: GaugeSegment[] | undefined
+  -- Prop description: Array of segments (if provided, multi-segment mode). Optional if using pointer mode.
+
+  -- gapDegrees
+  -- Prop Values: Default: 2
+  -- Prop description: Gap between segments in degrees
+
+  -- startAngle
+  -- Prop Values: Default: -140
+  -- Prop description: Start angle (deg) for the gauge (default -140)
+
+  -- endAngle
+  -- Prop Values: Default: 140
+  -- Prop description: End angle (deg) for the gauge (default 140)
+
+  -- trackColor
+  -- Prop Values: Default: #E4E7EB
+  -- Prop description: Background track color
+
+  -- label
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Label inside gauge
+
+  -- subLabel
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Sub label
+
+  -- labelFontSize
+  -- Prop Values: Default: 26
+  -- Prop description: Label font sizes
+
+  -- subLabelFontSize
+  -- Prop Values: Default: 16
+  -- Prop description: N/A
+
+  -- value
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Direct progress value (0..max) for single-color pointer style
+
+  -- min
+  -- Prop Values: Default: 0
+  -- Prop description: Minimum value for pointer gauge
+
+  -- max
+  -- Prop Values: Default: 100
+  -- Prop description: Maximum value for pointer gauge
+
+  -- pointerColor
+  -- Prop Values: Type: string | undefined
+  -- Prop description: Pointer color (defaults to first segment color or theme primary)
+
+  -- ticks
+  -- Prop Values: Default: [0, 30, 60, 90, 120]
+  -- Prop description: Show major tick labels around arc (pointer mode)
+
+  -- minorTickCount
+  -- Prop Values: Default: 40
+  -- Prop description: Minor tick count between min and max (pointer mode)
+
+  -- tickFormatter
+  -- Prop Values: Default: (v) => `${v}`
+  -- Prop description: Tick label formatter
+
+Example:
+const PointerExample = () => (
+  <GaugeChartOrbit {...{
+    value: 65,
+    min: 0,
+    max: 120,
+    label: 'Speed',
+    subLabel: 'mph',
+  },
+}} />
+);
+
+
+Component: MultiRingGauge
+Import: src/design-system/MultiRingGauge.tsx
+
+Props:
+  -- size
+  -- Prop Values: Default: 320
+  -- Prop description: Gauge diameter (px)
+
+  -- thickness
+  -- Prop Values: Default: 20
+  -- Prop description: Thickness of each ring
+
+  -- ringSpacing
+  -- Prop Values: Default: 12
+  -- Prop description: Spacing between rings
+
+  -- gapAngle
+  -- Prop Values: Default: 20
+  -- Prop description: Gap angle in degrees between start and end
+
+  -- rings
+  -- Prop Values: Type: GaugeRing[]
+  -- Prop description: Rings data outer→inner order
+
+  -- label
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Center label
+
+  -- subLabel
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Sub-label
+
+  -- trackColor
+  -- Prop Values: Default: #FFFFFF
+  -- Prop description: Track color
+
+  -- labelFontSize
+  -- Prop Values: Default: 40
+  -- Prop description: Font sizes
+
+  -- subLabelFontSize
+  -- Prop Values: Default: 24
+  -- Prop description: N/A
+
+Example:
+const DefaultExample = () => (
+  <MultiRingGauge {...{
+    rings: [
+      { progress: 0.8, color: '#47A9F6' },
+      { progress: 0.6, color: '#FFCE56' },
+      { progress: 0.4, color: '#4BC0C0' },
+    ],
+    label: '3/5',
+    subLabel: 'tasks',
+  },
+}} />
+);
+
+
+Component: PieChart
+Import: src/design-system/PieChart.tsx
+
+Props:
+  -- segments
+  -- Prop Values: Type: PieChartSegment[]
+  -- Prop description: Slices of the pie
+
+  -- size
+  -- Prop Values: Default: 180
+  -- Prop description: SVG viewbox size (px)
+
+  -- label
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Optional label rendered in the centre
+
+  -- subLabel
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Optional secondary label
+
+  -- labelFontSize
+  -- Prop Values: Default: 26
+  -- Prop description: Font size for label
+
+  -- subLabelFontSize
+  -- Prop Values: Default: 16
+  -- Prop description: Font size for sub-label
+
+  -- gapDegrees
+  -- Prop Values: Default: 0
+  -- Prop description: Degrees of gap between slices (dynamic variant)
+
+Example:
+const DefaultExample = () => (
+  <PieChart {...{
+    segments: [
+      { value: 50, color: '#47A9F6' },
+      { value: 30, color: '#FFCE56' },
+      { value: 20, color: '#FF6384' },
+    ],
+    label: 'Report',
+  },
+}} />
+);
+
+
+Component: SliderChart
+Import: src/design-system/SliderChart.tsx
+
+Props:
+  -- value
+  -- Prop Values: Type: number | undefined
+  -- Prop description: N/A
+
+  -- onChange
+  -- Prop Values: Type: ((v: number) => void) | undefined
+  -- Prop description: N/A
+
+  -- formatSubLabel
+  -- Prop Values: Default: (v) => Math.round(v)
+  -- Prop description: N/A
+
+  -- size
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Size of the outer diameter in px
+
+  -- thickness
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Thickness of the gauge arc
+
+  -- gapDegrees
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Gap between segments in degrees
+
+  -- startAngle
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Start angle (deg) for the gauge (default -140)
+
+  -- endAngle
+  -- Prop Values: Type: number | undefined
+  -- Prop description: End angle (deg) for the gauge (default 140)
+
+  -- trackColor
+  -- Prop Values: Type: string | undefined
+  -- Prop description: Background track color
+
+  -- label
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Label inside gauge
+
+  -- labelFontSize
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Label font sizes
+
+  -- subLabelFontSize
+  -- Prop Values: Type: number | undefined
+  -- Prop description: N/A
+
+  -- min
+  -- Prop Values: Default: 0
+  -- Prop description: Minimum value for pointer gauge
+
+  -- max
+  -- Prop Values: Default: 100
+  -- Prop description: Maximum value for pointer gauge
+
+  -- pointerColor
+  -- Prop Values: Type: string | undefined
+  -- Prop description: Pointer color (defaults to first segment color or theme primary)
+
+  -- ticks
+  -- Prop Values: Type: number[] | undefined
+  -- Prop description: Show major tick labels around arc (pointer mode)
+
+  -- minorTickCount
+  -- Prop Values: Type: number | undefined
+  -- Prop description: Minor tick count between min and max (pointer mode)
+
+  -- tickFormatter
+  -- Prop Values: Type: ((v: number) => string) | undefined
+  -- Prop description: Tick label formatter
+
+Example:
+const DefaultExample = () => (
+  <SliderChart {...{
+    value: 45,
+    min: 0,
+    max: 100,
+    label: 'Score',
+  },
+}} />
+);
+
+
+Component: VerticalDividerGroup
+Import: src/design-system/VerticalDividerGroup.tsx
+
+Props:
+  -- dividerHeight
+  -- Prop Values: Default: 1000
+  -- Prop description: N/A
+
+  -- dividerColor
+  -- Prop Values: Default: #5c5c5c99
+  -- Prop description: N/A
+
+  -- dividerMargin
+  -- Prop Values: Default: 16
+  -- Prop description: N/A
+
+Example:
+<VerticalDividerGroup />
+
+
+Component: RmaxButton
+Import: src/design-system/Routemax/RmaxButton.tsx
+
+Props:
+  -- children
+  -- Prop Values: Type: ReactNode
+  -- Prop description: The content of the component.
+
+  -- disabled
+  -- Prop Values: Type: boolean | undefined
+  -- Prop description: If `true`, the component is disabled.
+
+  -- sx
+  -- Prop Values: Type: SxProps<Theme> | undefined
+  -- Prop description: The system prop that allows defining system overrides as well as additional CSS styles.
+
+  -- color
+  -- Prop Values: Type: enum
+  -- Prop description: The color of the component.
+It supports both default and custom theme colors, which can be added as shown in the
+[palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).
+
+  -- fullWidth
+  -- Prop Values: Type: boolean | undefined
+  -- Prop description: If `true`, the button will take up the full width of its container.
+
+  -- href
+  -- Prop Values: Type: string | undefined
+  -- Prop description: The URL to link to when the button is clicked.
+If defined, an `a` element will be used as the root node.
+
+  -- size
+  -- Prop Values: Type: enum
+  -- Prop description: The size of the component.
+`small` is equivalent to the dense button styling.
+
+  -- variant
+  -- Prop Values: Default: primary
+  -- Prop description: N/A
+
+  -- type
+  -- Prop Values: Type: enum
+  -- Prop description: N/A
+
+  -- onClick
+  -- Prop Values: Type: ((e: MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined
+  -- Prop description: N/A
+
+  -- leftIcon
+  -- Prop Values: Type: ReactNode
+  -- Prop description: N/A
+
+  -- rightIcon
+  -- Prop Values: Type: ReactNode
+  -- Prop description: N/A
+
+  -- component
+  -- Prop Values: Type: ElementType<any, keyof IntrinsicElements> | undefined
+  -- Prop description: N/A
+
+  -- loading
+  -- Prop Values: Default: false
+  -- Prop description: N/A
+
+Example:
+const PrimaryExample = () => (
+  <RmaxButton {...{
+    variant: 'primary',
+    children: 'Primary Button',
+  },
+}} />
+);
+
+
+Component: RmaxGrid
+Import: src/design-system/Routemax/RmaxGrid.tsx
+
+Props:
+  -- columns
+  -- Prop Values: Type: any[] | undefined
+  -- Prop description: Column definitions for AG Grid. If not provided, a default 3-column grid is shown.
+
+  -- rows
+  -- Prop Values: Type: any[] | undefined
+  -- Prop description: Row data for AG Grid. If not provided, a default 2-row grid is shown.
+
+  -- onRowsChange
+  -- Prop Values: Type: ((rows: any[]) => void) | undefined
+  -- Prop description: Callback when row data changes (e.g. add/remove row/col). Receives new row data.
+
+  -- onColumnsChange
+  -- Prop Values: Type: ((columns: any[]) => void) | undefined
+  -- Prop description: Callback when column definitions change (e.g. add/remove col). Receives new columns.
+
+  -- hideToolbar
+  -- Prop Values: Type: boolean | undefined
+  -- Prop description: Hide the built-in toolbar (for full custom control)
+
+  -- height
+  -- Prop Values: Default: 400
+  -- Prop description: Height of the grid (default 400)
+
+  -- agGridProps
+  -- Prop Values: Default: {}
+  -- Prop description: Any extra props for AgGridReact
+
+Example:
+const DefaultExample = () => (
+  <RmaxGrid {...{
+    columns: [
+      { headerName: 'Make', field: 'make' },
+      { headerName: 'Model', field: 'model' },
+      { headerName: 'Price', field: 'price' },
+    ],
+    rows: [
+      { make: 'Toyota', model: 'Celica', price: 35000 },
+      { make: 'Ford', model: 'Mondeo', price: 32000 },
+    ],
+    height: 300,
+  },
+}} />
+);
+
+
+Component: RmaxTabBar
+Import: src/design-system/Routemax/RmaxTabBar.tsx
+
+Props:
+  -- tabs
+  -- Prop Values: Type: { label: string; value: string | number; icon?: ReactNode; disabled?: boolean | undefined; sx?: SxProps<Theme> | undefined; }[]
+  -- Prop description: Array of tab labels or objects with label, icon, and value
+
+  -- value
+  -- Prop Values: Type: string | number
+  -- Prop description: The value of the currently selected tab
+
+  -- onChange
+  -- Prop Values: Type: (event: SyntheticEvent<Element, Event>, value: string | number) => void
+  -- Prop description: Callback when a tab is selected
+
+  -- showSettingsIcon
+  -- Prop Values: Type: boolean | undefined
+  -- Prop description: Optional: Show a settings icon on the right
+
+  -- onSettingsClick
+  -- Prop Values: Type: (() => void) | undefined
+  -- Prop description: Optional: Callback for settings icon click
+
+  -- rightContent
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Optional: Custom right content (e.g., user menu)
+
+  -- leftContent
+  -- Prop Values: Type: ReactNode
+  -- Prop description: Optional: Custom left content (e.g., logo)
+
+  -- sx
+  -- Prop Values: Type: SxProps<Theme> | undefined
+  -- Prop description: Optional: sx for the root container
+
+  -- actions
+  -- Prop Values: Type: RmaxTabBarActionsProps | undefined
+  -- Prop description: Optional: Tab bar actions (settings, upload, help, cached)
+
+  -- component
+  -- Prop Values: Type: ElementType<any, keyof IntrinsicElements> | undefined
+  -- Prop description: N/A
+
+Example:
+const DefaultExample = () => (
+  <React {...{
+    value: 'overview',
+    tabs: [
+      { label: 'Overview', value: 'overview' },
+      { label: 'Details', value: 'details' },
+      { label: 'Settings', value: 'settings', disabled: true },
+    ],
+    actions: {
+      actions: [
+        { icon: <Upload />, tooltip: 'Upload', onClick: () => {}, color: 'white', hoverColor: 'white' },
+        { icon: <Settings />, tooltip: 'Settings', onClick: () => {}, color: 'white', hoverColor: 'white' },
+      ],
+      iconSize: 'small',
+      gap: 1,
+    },
+  },
+}} />
+);
+
+
+Component: RmaxTabBarActions
+Import: src/design-system/Routemax/RmaxTabBarActions.tsx
+
+Props:
+  -- actions
+  -- Prop Values: Type: RmaxTabBarAction[]
+  -- Prop description: N/A
+
+  -- sx
+  -- Prop Values: Type: SxProps<Theme> | undefined
+  -- Prop description: N/A
+
+  -- iconSize
+  -- Prop Values: Default: small
+  -- Prop description: N/A
+
+  -- gap
+  -- Prop Values: Type: number | undefined
+  -- Prop description: N/A
+
+Example:
+const DefaultExample = () => (
+  <RmaxTabBarActions {...{
+    actions: [
+      { icon: <UploadIcon />, tooltip: 'Upload', onClick: () => {} },
+      { icon: <SettingsIcon />, tooltip: 'Settings', onClick: () => {} },
+    ],
+  },
+}} />
+);
+

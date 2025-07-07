@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "generate-stories-metadata": "node scripts/convert-stories-metadata.js",
+    "generate-components-metadata": "node scripts/generate-components-metadata.js",
+    "generate-rag-json": "node scripts/generate-rag-json.js",
+    "rag-text-to-csv": "node scripts/rag-text-to-csv.js"
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^2.20.0",
@@ -15,20 +21,31 @@
     "@mui/icons-material": "^5.15.13",
     "@mui/material": "^5.15.13",
     "@mui/system": "^5.15.13",
+    "ag-grid-community": "^34.0.0",
+    "ag-grid-react": "^34.0.0",
     "framer-motion": "^12.19.2",
     "fs": "0.0.1-security",
     "next": "15.3.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@storybook/addon-essentials": "^7.6.17",
+    "@storybook/addon-interactions": "^7.6.17",
+    "@storybook/nextjs": "^7.6.17",
+    "@storybook/react": "^7.6.20",
+    "@storybook/testing-library": "^0.2.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "fast-glob": "^3.3.3",
+    "json5": "^2.2.3",
+    "react-docgen-typescript": "^2.4.0",
     "react-live": "^4.1.8",
+    "storybook": "^7.6.17",
     "typescript": "^5"
   }
 }

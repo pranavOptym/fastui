@@ -1,0 +1,2092 @@
+{
+  "DonutChart": {
+    "filePath": "src/design-system/DonutChart.tsx",
+    "props": {
+      "segments": {
+        "defaultValue": null,
+        "description": "Array of segment definitions",
+        "name": "segments",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "DonutChartSegment[]"
+        }
+      },
+      "size": {
+        "defaultValue": {
+          "value": "200"
+        },
+        "description": "Diameter of the chart in px",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "thickness": {
+        "defaultValue": {
+          "value": "18"
+        },
+        "description": "Stroke thickness in px",
+        "name": "thickness",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "rounded": {
+        "defaultValue": {
+          "value": "true"
+        },
+        "description": "Round line cap for segments",
+        "name": "rounded",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "Main label displayed at the centre",
+        "name": "label",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "subLabel": {
+        "defaultValue": null,
+        "description": "Secondary label under the main label",
+        "name": "subLabel",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "labelFontSize": {
+        "defaultValue": {
+          "value": "26"
+        },
+        "description": "Font size (px) for main label",
+        "name": "labelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "subLabelFontSize": {
+        "defaultValue": {
+          "value": "16"
+        },
+        "description": "Font size (px) for sub-label",
+        "name": "subLabelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/DonutChart.tsx",
+          "name": "DonutChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/DonutChart.tsx",
+            "name": "DonutChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      }
+    }
+  },
+  "GaugeChartOrbit": {
+    "filePath": "src/design-system/GaugeChartOrbit.tsx",
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "192"
+        },
+        "description": "Size of the outer diameter in px",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "thickness": {
+        "defaultValue": {
+          "value": "18"
+        },
+        "description": "Thickness of the gauge arc",
+        "name": "thickness",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "segments": {
+        "defaultValue": null,
+        "description": "Array of segments (if provided, multi-segment mode). Optional if using pointer mode.",
+        "name": "segments",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "GaugeSegment[] | undefined"
+        }
+      },
+      "gapDegrees": {
+        "defaultValue": {
+          "value": "2"
+        },
+        "description": "Gap between segments in degrees",
+        "name": "gapDegrees",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "startAngle": {
+        "defaultValue": {
+          "value": "-140"
+        },
+        "description": "Start angle (deg) for the gauge (default -140)",
+        "name": "startAngle",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "endAngle": {
+        "defaultValue": {
+          "value": "140"
+        },
+        "description": "End angle (deg) for the gauge (default 140)",
+        "name": "endAngle",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "trackColor": {
+        "defaultValue": {
+          "value": "#E4E7EB"
+        },
+        "description": "Background track color",
+        "name": "trackColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "Label inside gauge",
+        "name": "label",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "subLabel": {
+        "defaultValue": null,
+        "description": "Sub label",
+        "name": "subLabel",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "labelFontSize": {
+        "defaultValue": {
+          "value": "26"
+        },
+        "description": "Label font sizes",
+        "name": "labelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "subLabelFontSize": {
+        "defaultValue": {
+          "value": "16"
+        },
+        "description": "",
+        "name": "subLabelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "value": {
+        "defaultValue": null,
+        "description": "Direct progress value (0..max) for single-color pointer style",
+        "name": "value",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "min": {
+        "defaultValue": {
+          "value": "0"
+        },
+        "description": "Minimum value for pointer gauge",
+        "name": "min",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "max": {
+        "defaultValue": {
+          "value": "100"
+        },
+        "description": "Maximum value for pointer gauge",
+        "name": "max",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "pointerColor": {
+        "defaultValue": null,
+        "description": "Pointer color (defaults to first segment color or theme primary)",
+        "name": "pointerColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "ticks": {
+        "defaultValue": {
+          "value": "[0, 30, 60, 90, 120]"
+        },
+        "description": "Show major tick labels around arc (pointer mode)",
+        "name": "ticks",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number[] | undefined"
+        }
+      },
+      "minorTickCount": {
+        "defaultValue": {
+          "value": "40"
+        },
+        "description": "Minor tick count between min and max (pointer mode)",
+        "name": "minorTickCount",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "tickFormatter": {
+        "defaultValue": {
+          "value": "(v) => `${v}`"
+        },
+        "description": "Tick label formatter",
+        "name": "tickFormatter",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((v: number) => string) | undefined"
+        }
+      }
+    }
+  },
+  "MultiRingGauge": {
+    "filePath": "src/design-system/MultiRingGauge.tsx",
+    "props": {
+      "size": {
+        "defaultValue": {
+          "value": "320"
+        },
+        "description": "Gauge diameter (px)",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "thickness": {
+        "defaultValue": {
+          "value": "20"
+        },
+        "description": "Thickness of each ring",
+        "name": "thickness",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "ringSpacing": {
+        "defaultValue": {
+          "value": "12"
+        },
+        "description": "Spacing between rings",
+        "name": "ringSpacing",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "gapAngle": {
+        "defaultValue": {
+          "value": "20"
+        },
+        "description": "Gap angle in degrees between start and end",
+        "name": "gapAngle",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "rings": {
+        "defaultValue": null,
+        "description": "Rings data outer→inner order",
+        "name": "rings",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "GaugeRing[]"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "Center label",
+        "name": "label",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "subLabel": {
+        "defaultValue": null,
+        "description": "Sub-label",
+        "name": "subLabel",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "trackColor": {
+        "defaultValue": {
+          "value": "#FFFFFF"
+        },
+        "description": "Track color",
+        "name": "trackColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "labelFontSize": {
+        "defaultValue": {
+          "value": "40"
+        },
+        "description": "Font sizes",
+        "name": "labelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "subLabelFontSize": {
+        "defaultValue": {
+          "value": "24"
+        },
+        "description": "",
+        "name": "subLabelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+          "name": "MultiRingGaugeProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/MultiRingGauge.tsx",
+            "name": "MultiRingGaugeProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      }
+    }
+  },
+  "PieChart": {
+    "filePath": "src/design-system/PieChart.tsx",
+    "props": {
+      "segments": {
+        "defaultValue": null,
+        "description": "Slices of the pie",
+        "name": "segments",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "PieChartSegment[]"
+        }
+      },
+      "size": {
+        "defaultValue": {
+          "value": "180"
+        },
+        "description": "SVG viewbox size (px)",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "Optional label rendered in the centre",
+        "name": "label",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "subLabel": {
+        "defaultValue": null,
+        "description": "Optional secondary label",
+        "name": "subLabel",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "labelFontSize": {
+        "defaultValue": {
+          "value": "26"
+        },
+        "description": "Font size for label",
+        "name": "labelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "subLabelFontSize": {
+        "defaultValue": {
+          "value": "16"
+        },
+        "description": "Font size for sub-label",
+        "name": "subLabelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "gapDegrees": {
+        "defaultValue": {
+          "value": "0"
+        },
+        "description": "Degrees of gap between slices (dynamic variant)",
+        "name": "gapDegrees",
+        "parent": {
+          "fileName": "fastui/src/design-system/PieChart.tsx",
+          "name": "PieChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/PieChart.tsx",
+            "name": "PieChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      }
+    }
+  },
+  "SliderChart": {
+    "filePath": "src/design-system/SliderChart.tsx",
+    "props": {
+      "value": {
+        "defaultValue": null,
+        "description": "",
+        "name": "value",
+        "parent": {
+          "fileName": "fastui/src/design-system/SliderChart.tsx",
+          "name": "SliderChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/SliderChart.tsx",
+            "name": "SliderChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "onChange": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onChange",
+        "parent": {
+          "fileName": "fastui/src/design-system/SliderChart.tsx",
+          "name": "SliderChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/SliderChart.tsx",
+            "name": "SliderChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((v: number) => void) | undefined"
+        }
+      },
+      "formatSubLabel": {
+        "defaultValue": {
+          "value": "(v) => Math.round(v)"
+        },
+        "description": "",
+        "name": "formatSubLabel",
+        "parent": {
+          "fileName": "fastui/src/design-system/SliderChart.tsx",
+          "name": "SliderChartProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/SliderChart.tsx",
+            "name": "SliderChartProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((v: number) => ReactNode) | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "Size of the outer diameter in px",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "thickness": {
+        "defaultValue": null,
+        "description": "Thickness of the gauge arc",
+        "name": "thickness",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "gapDegrees": {
+        "defaultValue": null,
+        "description": "Gap between segments in degrees",
+        "name": "gapDegrees",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "startAngle": {
+        "defaultValue": null,
+        "description": "Start angle (deg) for the gauge (default -140)",
+        "name": "startAngle",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "endAngle": {
+        "defaultValue": null,
+        "description": "End angle (deg) for the gauge (default 140)",
+        "name": "endAngle",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "trackColor": {
+        "defaultValue": null,
+        "description": "Background track color",
+        "name": "trackColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "label": {
+        "defaultValue": null,
+        "description": "Label inside gauge",
+        "name": "label",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "labelFontSize": {
+        "defaultValue": null,
+        "description": "Label font sizes",
+        "name": "labelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "subLabelFontSize": {
+        "defaultValue": null,
+        "description": "",
+        "name": "subLabelFontSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "min": {
+        "defaultValue": {
+          "value": "0"
+        },
+        "description": "Minimum value for pointer gauge",
+        "name": "min",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "max": {
+        "defaultValue": {
+          "value": "100"
+        },
+        "description": "Maximum value for pointer gauge",
+        "name": "max",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "pointerColor": {
+        "defaultValue": null,
+        "description": "Pointer color (defaults to first segment color or theme primary)",
+        "name": "pointerColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "ticks": {
+        "defaultValue": null,
+        "description": "Show major tick labels around arc (pointer mode)",
+        "name": "ticks",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number[] | undefined"
+        }
+      },
+      "minorTickCount": {
+        "defaultValue": null,
+        "description": "Minor tick count between min and max (pointer mode)",
+        "name": "minorTickCount",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      },
+      "tickFormatter": {
+        "defaultValue": null,
+        "description": "Tick label formatter",
+        "name": "tickFormatter",
+        "parent": {
+          "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+          "name": "GaugeChartOrbitProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/GaugeChartOrbit.tsx",
+            "name": "GaugeChartOrbitProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((v: number) => string) | undefined"
+        }
+      }
+    }
+  },
+  "VerticalDividerGroup": {
+    "filePath": "src/design-system/VerticalDividerGroup.tsx",
+    "props": {
+      "dividerHeight": {
+        "defaultValue": {
+          "value": "1000"
+        },
+        "description": "",
+        "name": "dividerHeight",
+        "parent": {
+          "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+          "name": "VerticalDividerGroupProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+            "name": "VerticalDividerGroupProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | number | undefined"
+        }
+      },
+      "dividerColor": {
+        "defaultValue": {
+          "value": "#5c5c5c99"
+        },
+        "description": "",
+        "name": "dividerColor",
+        "parent": {
+          "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+          "name": "VerticalDividerGroupProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+            "name": "VerticalDividerGroupProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "dividerMargin": {
+        "defaultValue": {
+          "value": "16"
+        },
+        "description": "",
+        "name": "dividerMargin",
+        "parent": {
+          "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+          "name": "VerticalDividerGroupProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/VerticalDividerGroup.tsx",
+            "name": "VerticalDividerGroupProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | number | undefined"
+        }
+      }
+    }
+  },
+  "RmaxButton": {
+    "filePath": "src/design-system/Routemax/RmaxButton.tsx",
+    "props": {
+      "children": {
+        "defaultValue": null,
+        "description": "The content of the component.",
+        "name": "children",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "disabled": {
+        "defaultValue": null,
+        "description": "If `true`, the component is disabled.",
+        "name": "disabled",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "sx": {
+        "defaultValue": null,
+        "description": "The system prop that allows defining system overrides as well as additional CSS styles.",
+        "name": "sx",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "SxProps<Theme> | undefined"
+        }
+      },
+      "color": {
+        "defaultValue": null,
+        "description": "The color of the component.\nIt supports both default and custom theme colors, which can be added as shown in the\n[palette customization guide](https://mui.com/material-ui/customization/palette/#custom-colors).",
+        "name": "color",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "OverridableStringUnion<\"primary\" | \"inherit\" | \"secondary\" | \"success\" | \"error\" | \"info\" | \"warning\", ButtonPropsColorOverrides> | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"inherit\""
+            },
+            {
+              "value": "\"secondary\""
+            },
+            {
+              "value": "\"success\""
+            },
+            {
+              "value": "\"error\""
+            },
+            {
+              "value": "\"info\""
+            },
+            {
+              "value": "\"warning\""
+            }
+          ]
+        }
+      },
+      "fullWidth": {
+        "defaultValue": null,
+        "description": "If `true`, the button will take up the full width of its container.",
+        "name": "fullWidth",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "href": {
+        "defaultValue": null,
+        "description": "The URL to link to when the button is clicked.\nIf defined, an `a` element will be used as the root node.",
+        "name": "href",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | undefined"
+        }
+      },
+      "size": {
+        "defaultValue": null,
+        "description": "The size of the component.\n`small` is equivalent to the dense button styling.",
+        "name": "size",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "OverridableStringUnion<\"small\" | \"medium\" | \"large\", ButtonPropsSizeOverrides> | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "variant": {
+        "defaultValue": {
+          "value": "primary"
+        },
+        "description": "",
+        "name": "variant",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"text\" | \"primary\" | \"outlined\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"text\""
+            },
+            {
+              "value": "\"primary\""
+            },
+            {
+              "value": "\"outlined\""
+            }
+          ]
+        }
+      },
+      "type": {
+        "defaultValue": null,
+        "description": "",
+        "name": "type",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"button\" | \"submit\" | \"reset\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"button\""
+            },
+            {
+              "value": "\"submit\""
+            },
+            {
+              "value": "\"reset\""
+            }
+          ]
+        }
+      },
+      "onClick": {
+        "defaultValue": null,
+        "description": "",
+        "name": "onClick",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((e: MouseEvent<HTMLButtonElement, MouseEvent>) => void) | undefined"
+        }
+      },
+      "leftIcon": {
+        "defaultValue": null,
+        "description": "",
+        "name": "leftIcon",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "rightIcon": {
+        "defaultValue": null,
+        "description": "",
+        "name": "rightIcon",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "component": {
+        "defaultValue": null,
+        "description": "",
+        "name": "component",
+        "declarations": [
+          {
+            "fileName": "fastui/node_modules/.pnpm/@mui+material@5.17.1_@emotion+react@11.14.0_@emotion+styled@11.14.1_@types+react@19.1.8_react-dom@18.3.1_react@18.3.1/node_modules/@mui/material/Button/Button.d.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ElementType<any, keyof IntrinsicElements> | undefined"
+        }
+      },
+      "loading": {
+        "defaultValue": {
+          "value": "false"
+        },
+        "description": "",
+        "name": "loading",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxButtonProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxButtonProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      }
+    }
+  },
+  "RmaxGrid": {
+    "filePath": "src/design-system/Routemax/RmaxGrid.tsx",
+    "props": {
+      "columns": {
+        "defaultValue": null,
+        "description": "Column definitions for AG Grid. If not provided, a default 3-column grid is shown.",
+        "name": "columns",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "any[] | undefined"
+        }
+      },
+      "rows": {
+        "defaultValue": null,
+        "description": "Row data for AG Grid. If not provided, a default 2-row grid is shown.",
+        "name": "rows",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "any[] | undefined"
+        }
+      },
+      "onRowsChange": {
+        "defaultValue": null,
+        "description": "Callback when row data changes (e.g. add/remove row/col). Receives new row data.",
+        "name": "onRowsChange",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((rows: any[]) => void) | undefined"
+        }
+      },
+      "onColumnsChange": {
+        "defaultValue": null,
+        "description": "Callback when column definitions change (e.g. add/remove col). Receives new columns.",
+        "name": "onColumnsChange",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "((columns: any[]) => void) | undefined"
+        }
+      },
+      "hideToolbar": {
+        "defaultValue": null,
+        "description": "Hide the built-in toolbar (for full custom control)",
+        "name": "hideToolbar",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "height": {
+        "defaultValue": {
+          "value": "400"
+        },
+        "description": "Height of the grid (default 400)",
+        "name": "height",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "string | number | undefined"
+        }
+      },
+      "agGridProps": {
+        "defaultValue": {
+          "value": "{}"
+        },
+        "description": "Any extra props for AgGridReact",
+        "name": "agGridProps",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxGridProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxGridProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "any"
+        }
+      }
+    }
+  },
+  "RmaxTabBar": {
+    "filePath": "src/design-system/Routemax/RmaxTabBar.tsx",
+    "props": {
+      "tabs": {
+        "defaultValue": null,
+        "description": "Array of tab labels or objects with label, icon, and value",
+        "name": "tabs",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "{ label: string; value: string | number; icon?: ReactNode; disabled?: boolean | undefined; sx?: SxProps<Theme> | undefined; }[]"
+        }
+      },
+      "value": {
+        "defaultValue": null,
+        "description": "The value of the currently selected tab",
+        "name": "value",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "string | number"
+        }
+      },
+      "onChange": {
+        "defaultValue": null,
+        "description": "Callback when a tab is selected",
+        "name": "onChange",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "(event: SyntheticEvent<Element, Event>, value: string | number) => void"
+        }
+      },
+      "showSettingsIcon": {
+        "defaultValue": null,
+        "description": "Optional: Show a settings icon on the right",
+        "name": "showSettingsIcon",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "boolean | undefined"
+        }
+      },
+      "onSettingsClick": {
+        "defaultValue": null,
+        "description": "Optional: Callback for settings icon click",
+        "name": "onSettingsClick",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "(() => void) | undefined"
+        }
+      },
+      "rightContent": {
+        "defaultValue": null,
+        "description": "Optional: Custom right content (e.g., user menu)",
+        "name": "rightContent",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "leftContent": {
+        "defaultValue": null,
+        "description": "Optional: Custom left content (e.g., logo)",
+        "name": "leftContent",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ReactNode"
+        }
+      },
+      "sx": {
+        "defaultValue": null,
+        "description": "Optional: sx for the root container",
+        "name": "sx",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "SxProps<Theme> | undefined"
+        }
+      },
+      "actions": {
+        "defaultValue": null,
+        "description": "Optional: Tab bar actions (settings, upload, help, cached)",
+        "name": "actions",
+        "parent": {
+          "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+          "name": "RmaxTabBarProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/Routemax/RmaxTabBar.tsx",
+            "name": "RmaxTabBarProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "RmaxTabBarActionsProps | undefined"
+        }
+      },
+      "component": {
+        "defaultValue": null,
+        "description": "",
+        "name": "component",
+        "declarations": [
+          {
+            "fileName": "fastui/node_modules/.pnpm/@mui+material@5.17.1_@emotion+react@11.14.0_@emotion+styled@11.14.1_@types+react@19.1.8_react-dom@18.3.1_react@18.3.1/node_modules/@mui/material/Tabs/Tabs.d.ts",
+            "name": "TypeLiteral"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "ElementType<any, keyof IntrinsicElements> | undefined"
+        }
+      }
+    }
+  },
+  "RmaxTabBarActions": {
+    "filePath": "src/design-system/Routemax/RmaxTabBarActions.tsx",
+    "props": {
+      "actions": {
+        "defaultValue": null,
+        "description": "",
+        "name": "actions",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxTabBarActionsProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxTabBarActionsProps"
+          }
+        ],
+        "required": true,
+        "type": {
+          "name": "RmaxTabBarAction[]"
+        }
+      },
+      "sx": {
+        "defaultValue": null,
+        "description": "",
+        "name": "sx",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxTabBarActionsProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxTabBarActionsProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "SxProps<Theme> | undefined"
+        }
+      },
+      "iconSize": {
+        "defaultValue": {
+          "value": "small"
+        },
+        "description": "",
+        "name": "iconSize",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxTabBarActionsProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxTabBarActionsProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "enum",
+          "raw": "\"small\" | \"medium\" | \"large\" | undefined",
+          "value": [
+            {
+              "value": "undefined"
+            },
+            {
+              "value": "\"small\""
+            },
+            {
+              "value": "\"medium\""
+            },
+            {
+              "value": "\"large\""
+            }
+          ]
+        }
+      },
+      "gap": {
+        "defaultValue": null,
+        "description": "",
+        "name": "gap",
+        "parent": {
+          "fileName": "fastui/src/design-system/component-interface.ts",
+          "name": "RmaxTabBarActionsProps"
+        },
+        "declarations": [
+          {
+            "fileName": "fastui/src/design-system/component-interface.ts",
+            "name": "RmaxTabBarActionsProps"
+          }
+        ],
+        "required": false,
+        "type": {
+          "name": "number | undefined"
+        }
+      }
+    }
+  }
+}
